@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  AuthorId: 1
+  Title: MyString
+  Text: MyString
+  CommentsCounter: MyString
+  LikesCounter: MyString
+
+two:
+  AuthorId: 1
+  Title: MyString
+  Text: MyString
+  CommentsCounter: MyString
+  LikesCounter: MyString
