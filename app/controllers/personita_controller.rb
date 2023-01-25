@@ -1,5 +1,5 @@
 class PersonitaController < ApplicationController
-  before_action :set_personitum, only: %i[ show edit update destroy ]
+  before_action :set_personitum, only: %i[show edit update destroy]
 
   # GET /personita or /personita.json
   def index
@@ -7,8 +7,7 @@ class PersonitaController < ApplicationController
   end
 
   # GET /personita/1 or /personita/1.json
-  def show
-  end
+  def show; end
 
   # GET /personita/new
   def new
@@ -16,8 +15,7 @@ class PersonitaController < ApplicationController
   end
 
   # GET /personita/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /personita or /personita.json
   def create
@@ -25,7 +23,7 @@ class PersonitaController < ApplicationController
 
     respond_to do |format|
       if @personitum.save
-        format.html { redirect_to personitum_url(@personitum), notice: "Personitum was successfully created." }
+        format.html { redirect_to personitum_url(@personitum), notice: 'Personitum was successfully created.' }
         format.json { render :show, status: :created, location: @personitum }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class PersonitaController < ApplicationController
   def update
     respond_to do |format|
       if @personitum.update(personitum_params)
-        format.html { redirect_to personitum_url(@personitum), notice: "Personitum was successfully updated." }
+        format.html { redirect_to personitum_url(@personitum), notice: 'Personitum was successfully updated.' }
         format.json { render :show, status: :ok, location: @personitum }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +50,20 @@ class PersonitaController < ApplicationController
     @personitum.destroy
 
     respond_to do |format|
-      format.html { redirect_to personita_url, notice: "Personitum was successfully destroyed." }
+      format.html { redirect_to personita_url, notice: 'Personitum was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_personitum
-      @personitum = Personitum.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def personitum_params
-      params.require(:personitum).permit(:Name, :Photo, :Bio, :PostsCounter)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_personitum
+    @personitum = Personitum.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def personitum_params
+    params.require(:personitum).permit(:Name, :Photo, :Bio, :PostsCounter)
+  end
 end
