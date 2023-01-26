@@ -3,11 +3,11 @@
 one:
   Name: MyString
   Photo: MyString
-  Bio: MyString
+  Bio: MyText
   PostsCounter: 1
 
 two:
   Name: MyString
   Photo: MyString
-  Bio: MyString
+  Bio: MyText
   PostsCounter: 1

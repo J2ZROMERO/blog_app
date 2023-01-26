@@ -3,9 +3,9 @@
 one:
   AuthorId: 1
   PostId: 1
-  Text: MyString
+  Text: MyText
 
 two:
   AuthorId: 1
   PostId: 1
-  Text: MyString
+  Text: MyText
