@@ -155,7 +155,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank to MICROVERSE for make this works space.
+I would like to thank MICROVERSE for preparing the content to work.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
