@@ -145,9 +145,9 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Feel free to share your inquires to our social links provided and we will help you.
+> Feel free to share your inquiries to our social links provided and we will help you. Don't forget to gift us a ⭐️
 
-If you like this project...
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -155,9 +155,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+I would like to thank to MICROVERSE for make this works space.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
