@@ -1,45 +1,45 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class CommentsTest < ApplicationSystemTestCase
   setup do
     @comment = comments(:one)
   end
 
-  test "visiting the index" do
+  test 'visiting the index' do
     visit comments_url
-    assert_selector "h1", text: "Comments"
+    assert_selector 'h1', text: 'Comments'
   end
 
-  test "should create comment" do
+  test 'should create comment' do
     visit comments_url
-    click_on "New comment"
+    click_on 'New comment'
 
-    fill_in "Authorid", with: @comment.AuthorId
-    fill_in "Postid", with: @comment.PostId
-    fill_in "Text", with: @comment.Text
-    click_on "Create Comment"
+    fill_in 'Authorid', with: @comment.AuthorId
+    fill_in 'Postid', with: @comment.PostId
+    fill_in 'Text', with: @comment.Text
+    click_on 'Create Comment'
 
-    assert_text "Comment was successfully created"
-    click_on "Back"
+    assert_text 'Comment was successfully created'
+    click_on 'Back'
   end
 
-  test "should update Comment" do
+  test 'should update Comment' do
     visit comment_url(@comment)
-    click_on "Edit this comment", match: :first
+    click_on 'Edit this comment', match: :first
 
-    fill_in "Authorid", with: @comment.AuthorId
-    fill_in "Postid", with: @comment.PostId
-    fill_in "Text", with: @comment.Text
-    click_on "Update Comment"
+    fill_in 'Authorid', with: @comment.AuthorId
+    fill_in 'Postid', with: @comment.PostId
+    fill_in 'Text', with: @comment.Text
+    click_on 'Update Comment'
 
-    assert_text "Comment was successfully updated"
-    click_on "Back"
+    assert_text 'Comment was successfully updated'
+    click_on 'Back'
   end
 
-  test "should destroy Comment" do
+  test 'should destroy Comment' do
     visit comment_url(@comment)
-    click_on "Destroy this comment", match: :first
+    click_on 'Destroy this comment', match: :first
 
-    assert_text "Comment was successfully destroyed"
+    assert_text 'Comment was successfully destroyed'
   end
 end
