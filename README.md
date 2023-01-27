@@ -63,10 +63,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+> The next key features are availble in this project.
 
-- **[Load the project with prepared data once it is set it up]**
-- **[Interaction with model and custom methods]**
+- Load the project with prepared data once it is set it up.
+- Interaction with model and custom methods.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,9 +74,9 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+> You can see the deployment once it is executed in the next link.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [rails server](https://127.0.0.1:3000/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
