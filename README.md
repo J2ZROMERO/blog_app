@@ -167,9 +167,9 @@ You can deploy this project using:
 
 > The next features will be added.
 
-- [ ] **[Tests]**
-- [ ] **[React-Redux]**
-- [ ] **[Implement interfaz to make it interactive]**
+- [ ] Tests.
+- [ ] React-Redux.
+- [ ] Implement interfaz to make it interactive.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -209,13 +209,13 @@ I would like to thank MICROVERSE for preparing the content to work.
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[It can works with another data base]**
+- **It can works with another data base**
 
-  - [Of couser the idea of use postgresql is because it is a powerfull db that is well suited with rails.]
+  - Of couser the idea of use postgresql is because it is a powerfull db that is well suited with rails.
 
-- **[Linters are necessary]**
+- **Linters are necessary
 
-  - [If you want to have a redable and clean code it is a good option to choose]
+  - If you want to have a redable and clean code it is a good option to choose
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
