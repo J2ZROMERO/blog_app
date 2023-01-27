@@ -5,9 +5,15 @@ one:
   Photo: MyString
   Bio: MyString
   PostsCounter: MyString
+  git: MyString
+  add: MyString
+  .: MyString
 
 two:
   Name: MyString
   Photo: MyString
   Bio: MyString
   PostsCounter: MyString
+  git: MyString
+  add: MyString
+  .: MyString
