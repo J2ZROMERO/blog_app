@@ -9,24 +9,30 @@
 - [📖 Blog app ](#-blog-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
-      - [After db:setup is executed the file seed.rb is going to execute immediately this will add prepared data to your database, and you can test the customized methods from models.](#after-dbsetup-is-executed-the-file-seedrb-is-going-to-execute-immediately-this-will-add-prepared-data-to-your-database-and-you-can-test-the-customized-methods-from-models)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
   - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Blog app <a name="about-project"></a>
 
-> This is a project that is going to work as a blog app with the necessary characteristics to make it interactive.
+>  This is a project that is going to work as a blog app with the necessary characteristics to make it interactive.
+
+**[your_project__name]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -53,6 +59,17 @@
   </ul>
 </details>
 
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+> Describe between 1-3 key features of the application.
+
+- **[Load the project with prepared data once it is set it up]**
+- **[Interaction with model and custom methods]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -67,7 +84,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> In order to execute the project please follow these steps.
+> To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
@@ -84,6 +101,7 @@ In order to run this project you need:
 
 
 > [Ruby on Rails Framework](https://rubyonrails.org/)
+
 ### Setup
 
 Clone this repository to your desired folder:
@@ -106,6 +124,7 @@ the directory.
 
 > You have to change the data bases' crentials.
 
+
 ### Usage
 
 To run the project, execute the following command:
@@ -113,18 +132,26 @@ To run the project, execute the following command:
 - Once your credential is ready execute
 > Ruby bin/rails db:setup
 
-#### After db:setup is executed the file seed.rb is going to execute immediately this will add prepared data to your database, and you can test the customized methods from models.
+- After db:setup is executed the file seed.rb is going to execute immediately this will add prepared data to your database, and you can test the customized methods from models.
 
 - After that execute:
 > Ruby bin/rails db:migrate
-- Then:Execute if you have windows.
+
+### Run tests
+
+- Incoming.
+
+### Deployment
+
+You can deploy this project using:
+
 > Ruby bin/rails server
-- Last step go to your browser in the next direction.
+- Go to your browser in the next direction.
 > http://localhost:3000/
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
-
 ## 👥 Authors <a name="authors"></a>
 
 👤 **JOSE ZEPEDA**
@@ -134,6 +161,17 @@ To run the project, execute the following command:
 - LinkedIn: [JOSE ZEPEDA](https://www.linkedin.com/in/jose-zepeda-733ab91ab/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> The next features will be added.
+
+- [ ] **[Tests]**
+- [ ] **[React-Redux]**
+- [ ] **[Implement interfaz to make it interactive]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
@@ -141,9 +179,10 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/J2ZROMERO/blog_app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- SUPPORT -->
 
@@ -155,11 +194,28 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank MICROVERSE for preparing the content to work.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+
+> Add at least 2 questions new developers would ask when they decide to use your project.
+
+- **[It can works with another data base]**
+
+  - [Of couser the idea of use postgresql is because it is a powerfull db that is well suited with rails.]
+
+- **[Linters are necessary]**
+
+  - [If you want to have a redable and clean code it is a good option to choose]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
