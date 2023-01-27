@@ -63,10 +63,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+> The next key features are availble in this project.
 
-- **[Load the project with prepared data once it is set it up]**
-- **[Interaction with model and custom methods]**
+- Load the project with prepared data once it is set it up.
+- Interaction with model and custom methods.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,9 +74,9 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+> You can see the deployment once it is executed in the next link.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [rails server](https://127.0.0.1:3000/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,9 +167,9 @@ You can deploy this project using:
 
 > The next features will be added.
 
-- [ ] **[Tests]**
-- [ ] **[React-Redux]**
-- [ ] **[Implement interfaz to make it interactive]**
+- [ ] Tests.
+- [ ] React-Redux.
+- [ ] Implement interfaz to make it interactive.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -209,13 +209,13 @@ I would like to thank MICROVERSE for preparing the content to work.
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[It can works with another data base]**
+- **It can works with another data base**
 
-  - [Of couser the idea of use postgresql is because it is a powerfull db that is well suited with rails.]
+  - Of couser the idea of use postgresql is because it is a powerfull db that is well suited with rails.
 
-- **[Linters are necessary]**
+- **Linters are necessary
 
-  - [If you want to have a redable and clean code it is a good option to choose]
+  - If you want to have a redable and clean code it is a good option to choose
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
