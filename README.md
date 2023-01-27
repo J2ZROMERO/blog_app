@@ -224,6 +224,7 @@ I would like to thank MICROVERSE for preparing the content to work.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/J2ZROMERO/blog_app/blob/dev/MIT.md) licensed.
+This project is [MIT](https://github.com/J2ZROMERO/blog_app/blob/queries/MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
