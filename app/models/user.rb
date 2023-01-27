@@ -6,5 +6,10 @@ class User < ApplicationRecord
     validates :Photo, presence: true
     validates :Bio, presence: true
     validates :PostsCounter, presence: false
-  end
+
+def self.see_3recent_posts(id)
+    Post.where(author_id: id).last(3)    
+end
+
+end
   
