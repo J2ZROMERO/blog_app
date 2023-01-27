@@ -15,6 +15,7 @@
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
+      - [After db:setup is executed the file seed.rb is going to execute immediately this will add prepared data to your database, and you can test the customized methods from models.](#after-dbsetup-is-executed-the-file-seedrb-is-going-to-execute-immediately-this-will-add-prepared-data-to-your-database-and-you-can-test-the-customized-methods-from-models)
   - [👥 Authors ](#-authors-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -111,6 +112,9 @@ To run the project, execute the following command:
 
 - Once your credential is ready execute
 > Ruby bin/rails db:setup
+
+#### After db:setup is executed the file seed.rb is going to execute immediately this will add prepared data to your database, and you can test the customized methods from models.
+
 - After that execute:
 > Ruby bin/rails db:migrate
 - Then:Execute if you have windows.
