@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Like, type: :model do
   before(:each) do
     @first_user = User.new(id: 1, Name: 'Tom', Photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                           Bio: 'Teacher from Mexico.',PostsCounter: 10)
+                           Bio: 'Teacher from Mexico.', PostsCounter: 10)
     @first_user.save
     @subject = Post.new(id: 1, author_id: @first_user.id, Title: 'Hello', Text: 'This is my first post',
                         LikesCounter: 10, CommentsCounter: 20)
@@ -11,7 +11,7 @@ RSpec.describe Like, type: :model do
   end
 
   describe 'When the like model is tested' do
-    it "validates presence of the author and post foreign key" do
+    it 'validates presence of the author and post foreign key' do
       like = Like.new
       expect(like.valid?).to be false
       like.author_id = 1

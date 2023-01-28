@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Comment, type: :model do
   before(:each) do
     @first_user = User.new(id: 1, Name: 'Tom', Photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                           Bio: 'Teacher from Mexico.',PostsCounter: 10)
+                           Bio: 'Teacher from Mexico.', PostsCounter: 10)
     @first_user.save
     @subject = Post.new(id: 1, author_id: @first_user.id, Title: 'Hello', Text: 'This is my first post',
                         LikesCounter: 10, CommentsCounter: 20)
@@ -12,9 +12,8 @@ RSpec.describe Comment, type: :model do
     comment.save
   end
 
-
   describe 'When the like model is tested' do
-    it "validates presence of the author and post foreign key" do
+    it 'validates presence of the author and post foreign key' do
       comment = Comment.new
       expect(comment.valid?).to be false
       comment.author_id = 1
@@ -22,8 +21,6 @@ RSpec.describe Comment, type: :model do
       expect(comment.valid?).to be true
     end
   end
-
-
 
   describe 'When te test Comment is executed' do
     it 'The method Comments counter must change from 0 to 20' do
