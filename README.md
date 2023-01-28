@@ -148,7 +148,7 @@ To run the project, execute the following command:
   - The code above will ensure to prepare the modules for tests.
 - Execute: [ rspec ] if you wan to see all the tests working.
 - or execute rspec spec/models/NAME-OF-THE-MODEL_spec.rb  if you want to run a especific file.
-
+- If you want to see the tests existing and their definitions please run: " rspec --force-color --format documentation "
 ### Deployment
 
 You can deploy this project using:
