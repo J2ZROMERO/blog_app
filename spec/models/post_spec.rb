@@ -38,7 +38,6 @@ RSpec.describe Post, type: :model do
     end
   end
 
-
   describe 'When te test Post is executed' do
     it 'Validates the LikesCounter = integer' do
       expect(@subject.LikesCounter).to be_kind_of Numeric
