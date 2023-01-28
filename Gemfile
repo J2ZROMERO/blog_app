@@ -9,6 +9,8 @@ gem 'rails', '~> 7.0.4', '>= 7.0.4.1'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
+gem 'database_cleaner'
+
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
@@ -50,6 +52,7 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+gem 'rspec-rails', '~> 4.0.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

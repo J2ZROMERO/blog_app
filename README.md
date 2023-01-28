@@ -137,10 +137,18 @@ To run the project, execute the following command:
 - After that execute:
 > Ruby bin/rails db:migrate
 
+- This command will ensure to load the models to tests it.
 ### Run tests
 
-- Incoming.
-
+- To run the tests please follow the next instruccions.
+> The gem database_cleaner let us clean all the database before execute the test (:warning This gem only works for test and don't allow any input to the original data base), to use this gem is necesary to add some characteristics to the rails_helper.rb
+- Add the next gem : gem 'database_cleaner' to the Gemfile
+- Execute: bundle install.
+- Ruby bin/rails db:migrate RAILS_ENV=test 
+  - The code above will ensure to prepare the modules for tests.
+- Execute: [ rspec ] if you wan to see all the tests working.
+- or execute rspec spec/models/NAME-OF-THE-MODEL_spec.rb  if you want to run a especific file.
+- If you want to see the tests existing and their definitions please run: " rspec --force-color --format documentation "
 ### Deployment
 
 You can deploy this project using:
