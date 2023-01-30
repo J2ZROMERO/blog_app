@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   get 'user/:id', to: 'user#show'
   
   resources :user,only: [:show] do 
-    resources :post, only: [:index]
+    resources :post, only: [:index, :show]
+
 end
+
 
 
 

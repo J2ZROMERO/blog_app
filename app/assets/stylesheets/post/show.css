@@ -12,46 +12,17 @@ body, html {
     text-decoration: none;
     box-sizing: border-box;
 }
-.subParentContent{
+.postComment{
     width: 50%;
     height: 12%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2%;
-}
-.contentIconName{
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.contentIcon{
-    width: 90px;
-    height: 90px;
-    border: 1px solid black;
-}
-.contentNamePost{
-    display: flex;
-    justify-content: space-evenly;
-    width: 68%;
-    border: 1px solid black;
-}
-.numberPosts{
-    align-self: flex-end;
-    margin-bottom: 1%;
 }
 
-#posts_li{
-    list-style: none;
-    margin: 2% 0 0 0;
-    padding: 0;
-    width: 90%;
-}
 
-#p_item{
-margin-top: 3%;
-}
+
+
 
 .numPost{
     margin: 0;
@@ -64,10 +35,6 @@ margin-top: 3%;
     text-align: end;
     padding-right: 3%;
 }
-.seeAllpostsButton{
-    margin-top: 3%;
-    width: 31%;
-}
 
 .commentSection{
     border: 1px solid black;
@@ -75,11 +42,17 @@ margin-top: 3%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 98%;
+    border: 1px solid black;
+    margin: 0% 1% .5% 1%;
 }
 
 .postSection{
     border: 1px solid black;
-    margin: 4% 1% .5% 1% ;
+    margin: 4% 1% .5% 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .userComment{
