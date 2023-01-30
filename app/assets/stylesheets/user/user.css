@@ -1,37 +1,43 @@
-body, html {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    margin: 0;
-    border: 0;
-    flex-direction: column;
-    align-items: center;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  border: 0;
+  flex-direction: column;
+  align-items: center;
 }
-.subParentContent{
-    width: 50%;
-    height: 12%;
-    display: flex;
-    margin-top: 2%;
+
+.subParentContent {
+  width: 50%;
+  height: 12%;
+  display: flex;
+  margin-top: 2%;
 }
-.contentIconName{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
+.contentIconName {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.contentIcon{
-    width: 90px;
-    height: 90px;
-    border: 1px solid black;
+
+.contentIcon {
+  width: 90px;
+  height: 90px;
+  border: 1px solid black;
 }
-.contentNamePost{
-    display: flex;
-    justify-content: space-evenly;
-    width: 68%;
-    border: 1px solid black;
+
+.contentNamePost {
+  display: flex;
+  justify-content: space-evenly;
+  width: 68%;
+  border: 1px solid black;
 }
-.numberPosts{
-    align-self: flex-end;
-    margin-bottom: 1%;
+
+.numberPosts {
+  align-self: flex-end;
+  margin-bottom: 1%;
 }
