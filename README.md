@@ -149,6 +149,8 @@ To run the project, execute the following command:
 - Execute: [ rspec ] if you wan to see all the tests working.
 - or execute rspec spec/models/NAME-OF-THE-MODEL_spec.rb  if you want to run a especific file.
 - If you want to see the tests existing and their definitions please run: " rspec --force-color --format documentation "
+- To check the tests's controllers please execute the next command on your root project console: "" rspec spec/requests/ ""  you will see all the tests' controllers in execution.
+
 ### Deployment
 
 You can deploy this project using:
