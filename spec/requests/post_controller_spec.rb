@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe PostController, type: :request do
@@ -42,4 +41,3 @@ RSpec.describe PostController, type: :request do
     end
   end
 end
-

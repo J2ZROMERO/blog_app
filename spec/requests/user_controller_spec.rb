@@ -6,8 +6,7 @@ RSpec.describe UserController, type: :request do
   end
 
   describe 'GET #index' do
-    
-  it 'returns a successful response' do
+    it 'returns a successful response' do
       get root_path
       expect(response).to be_successful
     end
