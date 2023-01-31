@@ -1,0 +1,94 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.subParentContent {
+  width: 50%;
+  height: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.contentIconName {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contentIcon {
+  width: 90px;
+  height: 90px;
+  border: 1px solid black;
+}
+
+.contentNamePost {
+  display: flex;
+  justify-content: space-evenly;
+  width: 68%;
+  border: 1px solid black;
+}
+
+.numberPosts {
+  align-self: flex-end;
+  margin-bottom: 1%;
+}
+
+.bio {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  width: 90%;
+  padding: 2% 0% 2% 0%;
+}
+
+.InBio {
+  padding: 0% 2% 0 2%;
+}
+
+#posts_li {
+  list-style: none;
+  margin: 2% 0 0 0;
+  padding: 0;
+  width: 90%;
+}
+
+#p_item {
+  margin-top: 3%;
+  border: 1px solid black;
+}
+
+.numPost {
+  margin: 0;
+}
+
+.textPost {
+  margin: 2% 0% 2% 0%;
+}
+
+.comLikesPost {
+  margin: 0;
+  text-align: end;
+  padding-right: 3%;
+}
+
+.seeAllpostsButton {
+  margin-top: 3%;
+  width: 31%;
+}

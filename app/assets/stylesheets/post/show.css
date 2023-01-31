@@ -1,0 +1,72 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.postComment {
+  width: 50%;
+  height: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.numPost {
+  margin: 0;
+}
+
+.textPost {
+  margin: 2% 0% 2% 0%;
+}
+
+.comLikesPost {
+  margin: 0;
+  text-align: end;
+  padding-right: 3%;
+}
+
+.commentSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 98%;
+  border: 1px solid black;
+  margin: 0% 1% 0.5% 1%;
+}
+
+.postSection {
+  border: 1px solid black;
+  margin: 4% 1% 0.5% 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.userComment {
+  margin: 1% 0 1% 0;
+  font-size: 1.3em;
+}
+
+.commentMessage {
+  margin: 1% 0 0.3% 2%;
+  font-size: 1.1em;
+}
+
+.commentByUser {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+}

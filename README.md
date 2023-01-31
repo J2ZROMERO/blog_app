@@ -154,8 +154,13 @@ To run the project, execute the following command:
 You can deploy this project using:
 
 > Ruby bin/rails server
-- Go to your browser in the next direction.
-> http://localhost:3000/
+- Go to your browser in the next directions to interact with the apps.
+> http://localhost:3000/ 
+> http://localhost:3000/user/745/
+> http://localhost:3000/user/745/post/ 
+> http://localhost:3000/user/745/post/3
+
+- You can change the id's [745 / 3] for another one.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -177,7 +182,7 @@ You can deploy this project using:
 
 - [ ] Tests.
 - [ ] React-Redux.
-- [ ] Implement interfaz to make it interactive.
+- [ ] Fetch data to implement it on the interfaz to make it interactive.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

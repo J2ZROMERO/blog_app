@@ -1,0 +1,110 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.subParentContent {
+  width: 50%;
+  height: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.contentIconName {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contentIcon {
+  width: 90px;
+  height: 90px;
+  border: 1px solid black;
+}
+
+.contentNamePost {
+  display: flex;
+  justify-content: space-evenly;
+  width: 68%;
+  border: 1px solid black;
+}
+
+.numberPosts {
+  align-self: flex-end;
+  margin-bottom: 1%;
+}
+
+#posts_li {
+  list-style: none;
+  margin: 2% 0 0 0;
+  padding: 0;
+  width: 90%;
+}
+
+#p_item {
+  margin-top: 3%;
+}
+
+.numPost {
+  margin: 0;
+}
+
+.textPost {
+  margin: 2% 0% 2% 0%;
+}
+
+.comLikesPost {
+  margin: 0;
+  text-align: end;
+  padding-right: 3%;
+}
+
+.seeAllpostsButton {
+  margin-top: 3%;
+  width: 31%;
+}
+
+.commentSection {
+  border: 1px solid black;
+  margin: 1% 1% 1% 1%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.postSection {
+  border: 1px solid black;
+  margin: 4% 1% 0.5% 1%;
+}
+
+.userComment {
+  margin: 1% 0 1% 0;
+  font-size: 1.3em;
+}
+
+.commentMessage {
+  margin: 1% 0 0.3% 2%;
+  font-size: 1.1em;
+}
+
+.commentByUser {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+}
