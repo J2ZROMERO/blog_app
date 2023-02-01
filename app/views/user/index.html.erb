@@ -1,12 +1,10 @@
 
-  <div class="subParentContent_user_index">
-  <div class="contentIconName_user_index"> 
-  <div class="contentIcon_user_index">  <%= image_tag "icon.png", alt: "adadasda", class: "contentIcon_user_index" %>  
-  </div> 
-  <div class="contentNamePost_user_index">
-      <h2 class="name_user_index">"User Name"</h2>
-       <h3 class="numberPosts_user_index">"Number of posts: x"</h3> 
-      </div> 
-  </div>
-      </div>
+  <ul class="subParentContent_user_index">
+  <% @users.each do |user| %>
+    
+    <%= render "user/user", user: user %>
+    
+    <% end %>
+    
+  </ul>
 

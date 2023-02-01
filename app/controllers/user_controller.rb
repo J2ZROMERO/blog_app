@@ -2,6 +2,7 @@ class UserController < ApplicationController
   layout 'application'
   def index
      @stylesheet = 'user/user'
+     @users = User.all
   end
   
   def show

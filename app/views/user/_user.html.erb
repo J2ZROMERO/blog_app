@@ -1,0 +1,11 @@
+<li class="contentIconName_user_index"> 
+  
+  <div class="contentIcon_user_index">  
+      <%= image_tag user.Photo, alt: "No available", class: "contentIcon_user_index" %> 
+  </div> 
+  
+  <div class="contentNamePost_user_index">
+      <h2 class="name_user_index"><%=user.Name%></h2>
+       <h3 class="numberPosts_user_index">Number of posts:  <%= user.PostsCounter.nil? ? 0 : user.PostsCounter %></h3> 
+      </div> 
+<li/>

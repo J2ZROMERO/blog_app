@@ -14,7 +14,9 @@ html {
   width: 50%;
   height: 12%;
   display: flex;
-  margin-top: 2%;
+  margin: 2% 0 0 0;
+  flex-direction: column;
+  list-style: none;
 }
 
 .contentIconName_user_index {
@@ -22,6 +24,7 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 3%;
 }
 
 .contentIcon_user_index {
