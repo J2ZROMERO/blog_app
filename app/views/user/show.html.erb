@@ -1,32 +1,28 @@
   <div class="subParentContent_user_show">
   <div class="contentIconName_user_show"> 
-  <div class="contentIcon_user_show">  <%= image_tag "icon.png", alt: "adadasda", class: "contentIcon_user_show" %>  
+  <div class="contentIcon_user_show">  <%= image_tag @users.Photo, alt: "No available", class: "contentIcon_user_show" %>  
   </div>
   <div class="contentNamePost_user_show">
-      <h2 class="name_user_show">"User Name"</h2>
-       <h3 class="numberPosts_user_show">"Number of posts: x"</h3> 
+      <h2 class="name_user_show"><%=  @users.Name%></h2>
+       <h3 class="numberPosts_user_show">Number of posts: <%= @users.PostsCounter.nil? ? 0 : @users.PostsCounter %></h3> 
       </div> 
   </div>
   <div class="bio_user_show"> <p class="InBio_user_show"> Bio  <br><br> 
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, 
-  veniam nam aut doloremque deleniti quo voluptatibus ullam 
-  velit repellat modi aliquid molestias a labore soluta ab tenetur reiciendis earum debitis.
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos doloribus quae officiis 
-  harum molestiae quos magni quasi
-  , omnis debitis? At harum omnis beatae officia reprehenderit, eos eligendi dolor perspiciatis nobis.
+  <%= @users.Bio %>
   </p>
 
   </div>
   
   <ul id="posts_li_user_show">
   
-  <li id="p_item_user_show"> 
-      <h2 class="numPost_user_show">Post #1</h2>
-       <p class="textPost_user_show">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure possimus dolorem ipsum excepturi modi rem sequi esse dolore, fuga laudantium laboriosam ut est, placeat ducimus deleniti deserunt? Sapiente, in aliquam? </p>
-  <h3 class="comLikesPost_user_show">Comments: x, Likes: y </h3>
-      </li>
-  
+ <% @posts.each do |post|%>
+
+    <%= render "user/bio", post: post %>
+    
+<% end %>
+
   </ul>
+
   <button type="button" class="seeAllpostsButton_user_show">See all posts</button>
   </div>
   </div>

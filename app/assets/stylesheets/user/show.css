@@ -51,7 +51,6 @@ html {
 .bio_user_show {
   border: 1px solid black;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-top: 2%;
   width: 90%;
