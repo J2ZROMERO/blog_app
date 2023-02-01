@@ -8,9 +8,9 @@ class UserController < ApplicationController
   def show
     @stylesheet = 'user/show'
     @users = User.find_by(id: params[:id]) # object no proper of the database we use new instead of find
-    @posts = Post.return5_recent_post(params[:id])
-    @comments = Comment.where(id: params[:id]).count
-    @posts_counter = Post.where(id: params[:id]).count
+    @posts = User.see_3recent_posts(@users.id)
+    @comments = Comment.where(author_id: params[:id]).count
+    @posts_counter = Post.where(author_id: params[:id]).count
   end
   
 end
