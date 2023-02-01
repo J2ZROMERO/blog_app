@@ -14,7 +14,7 @@ html {
   box-sizing: border-box;
 }
 
-.subParentContent {
+.subParentContent_user_show {
   width: 50%;
   height: 12%;
   display: flex;
@@ -23,32 +23,32 @@ html {
   margin-top: 2%;
 }
 
-.contentIconName {
+.contentIconName_user_show {
   width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.contentIcon {
+.contentIcon_user_show {
   width: 90px;
   height: 90px;
   border: 1px solid black;
 }
 
-.contentNamePost {
+.contentNamePost_user_show {
   display: flex;
   justify-content: space-evenly;
   width: 68%;
   border: 1px solid black;
 }
 
-.numberPosts {
+.numberPosts_user_show {
   align-self: flex-end;
   margin-bottom: 1%;
 }
 
-.bio {
+.bio_user_show {
   border: 1px solid black;
   display: flex;
   justify-content: center;
@@ -58,37 +58,37 @@ html {
   padding: 2% 0% 2% 0%;
 }
 
-.InBio {
+.InBio_user_show {
   padding: 0% 2% 0 2%;
 }
 
-#posts_li {
+#posts_li_user_show {
   list-style: none;
   margin: 2% 0 0 0;
   padding: 0;
   width: 90%;
 }
 
-#p_item {
+#p_item_user_show {
   margin-top: 3%;
   border: 1px solid black;
 }
 
-.numPost {
+.numPost_user_show {
   margin: 0;
 }
 
-.textPost {
+.textPost_user_show {
   margin: 2% 0% 2% 0%;
 }
 
-.comLikesPost {
+.comLikesPost_user_show {
   margin: 0;
   text-align: end;
   padding-right: 3%;
 }
 
-.seeAllpostsButton {
+.seeAllpostsButton_user_show {
   margin-top: 3%;
   width: 31%;
 }

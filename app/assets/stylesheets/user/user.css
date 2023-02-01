@@ -10,34 +10,34 @@ html {
   align-items: center;
 }
 
-.subParentContent {
+.subParentContent_user_index {
   width: 50%;
   height: 12%;
   display: flex;
   margin-top: 2%;
 }
 
-.contentIconName {
+.contentIconName_user_index {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.contentIcon {
+.contentIcon_user_index {
   width: 90px;
   height: 90px;
   border: 1px solid black;
 }
 
-.contentNamePost {
+.contentNamePost_user_index {
   display: flex;
   justify-content: space-evenly;
   width: 68%;
   border: 1px solid black;
 }
 
-.numberPosts {
+.numberPosts_user_index {
   align-self: flex-end;
   margin-bottom: 1%;
 }
