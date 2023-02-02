@@ -2,6 +2,9 @@
   <li id="p_item_user_show"> 
   <h2 class="numPost_user_show">Post <%= post.id %></h2>
    <p class="textPost_user_show"><%= post.Text %> </p>
-<h3 class="comLikesPost_user_show">Comments: <%= @comments %>,
- Likes: <%= @posts_counter %> </h3>
+<h3 class="comLikesPost_user_show">
+Comments: <%= @comments_count_by_post[post.id] || 0 %>, 
+Likes: <%= @likes_count_by_post[post.id] || 0 %>,
+  </h3>
   </li>
+
