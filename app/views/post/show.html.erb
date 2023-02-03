@@ -1,40 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>"Mi sitio web"</title>
-    <%= stylesheet_link_tag 'post/show', media: 'all', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-  
-  <div class="postComment">
+  <div class="postComment_post_show">
 
     
-        <div class="postSection">  <h2 class="numPost">Post #1</h2>
-        <h3 class="comLikesPost">Comments: x, Likes: y </h3>
-        <p class="textPost">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure possimus dolorem ipsum excepturi modi rem sequi esse dolore, fuga laudantium laboriosam ut est, placeat ducimus deleniti deserunt? Sapiente, in aliquam? 
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure possimus dolorem ipsum excepturi modi rem sequi esse dolore, fuga laudantium laboriosam ut est, placeat ducimus deleniti deserunt? Sapiente, in aliquam? 
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure possimus dolorem ipsum excepturi modi rem sequi esse dolore, fuga laudantium laboriosam ut est, placeat ducimus deleniti deserunt? Sapiente, in aliquam? 
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure possimus dolorem ipsum excepturi 
-        modi rem sequi esse dolore, <br> <br> fuga laudantium laboriosam ut est, placeat ducimus deleniti deserunt? Sapiente, in aliquam? 
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure possimus dolorem ipsum excepturi modi rem sequi esse dolore, fuga laudantium laboriosam ut est, placeat ducimus deleniti deserunt? Sapiente, in aliquam? 
-        
+        <div class="postSection_post_show"> 
+         <h2 class="numPost_post_show">Post <%= @post.id %> By  <%= @post.user.Name %></h2>
+        <h3 class="comLikesPost_post_show">
+        Comments: <%= @comments_count_by_post %>, 
+        Likes: <%= @likes_count_by_post %> </h3>
+        <p class="textPost_post_show">
+        <%= @post.Text %> 
         </p>
         </div>
-        <div class="commentSection"> 
-        <div class="commentByUser"><h2 class="userComment">Username: <h3 class="commentMessage"> Comment 1</h3> </h2> </div> 
-        <div class="commentByUser"><h2 class="userComment">Username: <h3 class="commentMessage"> Comment 2</h3> </h2> </div> 
-        <div class="commentByUser"><h2 class="userComment">Username: <h3 class="commentMessage"> Comment 3</h3> </h2> </div> 
-        <div class="commentByUser"><h2 class="userComment">Username: <h3 class="commentMessage"> Comment 4</h3> </h2> </div> 
-        <div class="commentByUser"><h2 class="userComment">Username: <h3 class="commentMessage"> Comment 5</h3> </h2> </div> 
-        <div class="commentByUser"><h2 class="userComment">Username: <h3 class="commentMessage"> Comment 6</h3> </h2> </div> 
-        <div class="commentByUser"><h2 class="userComment">Username: <h3 class="commentMessage"> Comment 7</h3> </h2> </div> 
-        <div class="commentByUser"><h2 class="userComment">Username: <h3 class="commentMessage"> Comment 8</h3> </h2> </div> 
-        <div class="commentByUser"><h2 class="userComment">Username: <h3 class="commentMessage"> Comment 9</h3> </h2> </div> 
-        <div class="commentByUser"><h2 class="userComment">Username: <h3 class="commentMessage"> Comment 10</h3> </h2> </div> 
-        </div>
-  </div>
+        <ul class="commentSection_post_show"> 
 
-      
-  </body>
-</html>
+        <% @comments_by_post.each do |comment| %>
+        <li class="commentByUser_post_show">
+        <h2 class="userComment_post_show"> <%= comment.user.Name %> :  
+         <h3 class="commentMessage_post_show"> <%= comment.Text %></h3> 
+        </h2>
+         </li> 
+         <% end %>
+
+        </ul>
+  </div>

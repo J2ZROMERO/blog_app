@@ -12,6 +12,6 @@ class Post < ApplicationRecord
   end
 
   def self.return5_recent_post(id)
-    Comment.where(posts_id: id).last(5)
+    Comment.where(author_id: id).last(5)
   end
 end

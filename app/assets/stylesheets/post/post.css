@@ -14,7 +14,7 @@ html {
   box-sizing: border-box;
 }
 
-.subParentContent {
+.subParentContent_post_index {
   width: 50%;
   height: 12%;
   display: flex;
@@ -23,62 +23,62 @@ html {
   margin-top: 2%;
 }
 
-.contentIconName {
+.contentIconName_post_index {
   width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.contentIcon {
+.contentIcon_post_index {
   width: 90px;
   height: 90px;
   border: 1px solid black;
 }
 
-.contentNamePost {
+.contentNamePost_post_index {
   display: flex;
   justify-content: space-evenly;
   width: 68%;
   border: 1px solid black;
 }
 
-.numberPosts {
+.numberPosts_post_index {
   align-self: flex-end;
   margin-bottom: 1%;
 }
 
-#posts_li {
+#posts_li_post_index {
   list-style: none;
   margin: 2% 0 0 0;
   padding: 0;
   width: 90%;
 }
 
-#p_item {
+#p_item_post_index {
   margin-top: 3%;
 }
 
-.numPost {
+.numPost_post_index {
   margin: 0;
 }
 
-.textPost {
+.textPost_post_index {
   margin: 2% 0% 2% 0%;
 }
 
-.comLikesPost {
+.comLikesPost_post_index {
   margin: 0;
   text-align: end;
   padding-right: 3%;
 }
 
-.seeAllpostsButton {
+.seeAllpostsButton_post_index {
   margin-top: 3%;
   width: 31%;
 }
 
-.commentSection {
+.commentSection_post_index {
   border: 1px solid black;
   margin: 1% 1% 1% 1%;
   display: flex;
@@ -86,22 +86,22 @@ html {
   flex-direction: column;
 }
 
-.postSection {
+.postSection_post_index {
   border: 1px solid black;
   margin: 4% 1% 0.5% 1%;
 }
 
-.userComment {
+.userComment_post_index {
   margin: 1% 0 1% 0;
   font-size: 1.3em;
 }
 
-.commentMessage {
+.commentMessage_post_index {
   margin: 1% 0 0.3% 2%;
   font-size: 1.1em;
 }
 
-.commentByUser {
+.commentByUser_post_index {
   display: flex;
   justify-content: flex-start;
   align-items: center;

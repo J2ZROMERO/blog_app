@@ -14,29 +14,30 @@ html {
   box-sizing: border-box;
 }
 
-.postComment {
+.postComment_post_show {
   width: 50%;
   height: 12%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.numPost {
+.numPost_post_show {
   margin: 0;
+  width: 60%;
 }
 
-.textPost {
+.textPost_post_show {
   margin: 2% 0% 2% 0%;
 }
 
-.comLikesPost {
+.comLikesPost_post_show {
   margin: 0;
   text-align: end;
   padding-right: 3%;
 }
 
-.commentSection {
+.commentSection_post_show {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -45,25 +46,26 @@ html {
   margin: 0% 1% 0.5% 1%;
 }
 
-.postSection {
+.postSection_post_show {
   border: 1px solid black;
   margin: 4% 1% 0.5% 1%;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: space-between;
 }
 
-.userComment {
+.userComment_post_show {
   margin: 1% 0 1% 0;
   font-size: 1.3em;
 }
 
-.commentMessage {
+.commentMessage_post_show {
   margin: 1% 0 0.3% 2%;
   font-size: 1.1em;
 }
 
-.commentByUser {
+.commentByUser_post_show {
   display: flex;
   justify-content: flex-start;
   align-items: center;
