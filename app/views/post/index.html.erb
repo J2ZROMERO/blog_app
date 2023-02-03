@@ -2,47 +2,23 @@
   
   <div class="subParentContent_post_index">
   <div class="contentIconName_post_index"> 
-  <div class="contentIcon_post_index">  <%= image_tag "icon.png", alt: "adadasda", class: "contentIcon" %>  
+  <div class="contentIcon_post_index">  <%= image_tag @users.Photo, alt: "adadasda", class: "contentIcon" %>  
   </div> 
   <div class="contentNamePost_post_index">
-      <h2 class="name_post_index">"User Name"</h2>
-       <h3 class="numberPosts_post_index">"Number of posts: x"</h3> 
+      <h2 class="name_post_index"><%= @users.Name %></h2>
+       <h3 class="numberPosts_post_index">Number of posts: <%= @posts_counter%></h3> 
       </div> 
   </div>
 
   <ul id="posts_li_post_index">
-  
-  <li id="p_item_post_index"> 
+  <% @posts.each  do |post|  %>
     
-        <div class="postSection_post_index">  <h2 class="numPost_post_index">Post #1</h2>
-        <p class="textPost_post_index">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure possimus dolorem ipsum excepturi modi rem sequi esse dolore, fuga laudantium laboriosam ut est, placeat ducimus deleniti deserunt? Sapiente, in aliquam? </p>
-        <h3 class="comLikesPost_post_index">Comments: x, Likes: y </h3>
-        </div>
-        <div class="commentSection_post_index"> 
-        <div class="commentByUser_post_index"><h2 class="userComment_post_index">Username: <h3 class="commentMessage_post_index"> Comment 1</h3> </h2> </div> 
-        <div class="commentByUser_post_index"><h2 class="userComment_post_index">Username: <h3 class="commentMessage_post_index"> Comment 2</h3> </h2> </div> 
-        <div class="commentByUser_post_index"><h2 class="userComment_post_index">Username: <h3 class="commentMessage_post_index"> Comment 3</h3> </h2> </div> 
-        <div class="commentByUser_post_index"><h2 class="userComment_post_index">Username: <h3 class="commentMessage_post_index"> Comment 4</h3> </h2> </div> 
-        <div class="commentByUser_post_index"><h2 class="userComment_post_index">Username: <h3 class="commentMessage_post_index"> Comment 5</h3> </h2> </div> 
-        </div>
+    <%= render "post/user_post", post: post %>
 
-        <div class="postSection_post_index">  <h2 class="numPost_post_index">Post #2</h2>
-        <p class="textPost_post_index">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure possimus dolorem ipsum excepturi modi rem sequi esse dolore, fuga laudantium laboriosam ut est, placeat ducimus deleniti deserunt? Sapiente, in aliquam? </p>
-        <h3 class="comLikesPost_post_index">Comments: x, Likes: y </h3>
-        </div>
-        <div class="commentSection_post_index"> 
-        <div class="commentByUser_post_index"><h2 class="userComment_post_index">Username: <h3 class="commentMessage_post_index"> Comment 1</h3> </h2> </div> 
-        <div class="commentByUser_post_index"><h2 class="userComment_post_index">Username: <h3 class="commentMessage_post_index"> Comment 2</h3> </h2> </div> 
-        <div class="commentByUser_post_index"><h2 class="userComment_post_index">Username: <h3 class="commentMessage_post_index"> Comment 3</h3> </h2> </div> 
-        <div class="commentByUser_post_index"><h2 class="userComment_post_index">Username: <h3 class="commentMessage_post_index"> Comment 4</h3> </h2> </div> 
-        <div class="commentByUser_post_index"><h2 class="userComment_post_index">Username: <h3 class="commentMessage_post_index"> Comment 5</h3> </h2> </div> 
-        </div>
 
-        
+   
+    <%end%>
 
-      </li>
-
-      
   </ul>
   <button type="button" class="seeAllpostsButton_post_index">Pagination</button>
   </div>

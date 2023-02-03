@@ -19,6 +19,7 @@ class UserController < ApplicationController
     @posts.each do |post|
       @comments_count_by_post[post.id] = Comment.where(posts_id: post.id, author_id: params[:id]).count
       @likes_count_by_post[post.id] =  Post.group(:id).find_by(id: post.id,author_id: params[:id]).LikesCounter
+      
     end
   
   end
