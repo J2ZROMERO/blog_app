@@ -124,6 +124,17 @@ the directory.
 
 > You have to change the data bases' crentials.
 
+> When the project si already installed execute:
+ - rake db:setup or rails db:setup
+    - Once this in being executed the nexts actions are generated 
+    - rake db:create
+    - rake db:schema:load
+    - rake db:seed
+
+> If you already have  the project in your local you can pull the lastes commit and execute the next commands:
+  - rails db:reset
+  - rails db:migrate:reset
+  - rails db:seed
 
 ### Usage
 
@@ -162,7 +173,7 @@ You can deploy this project using:
 > http://localhost:3000/user/745/post/ 
 > http://localhost:3000/user/745/post/3
 
-- You can change the id's [745 / 3] for another one.
+- You can change the id's [745 / 3] for another one available on the interfaz.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
