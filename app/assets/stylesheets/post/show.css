@@ -18,12 +18,13 @@ html {
   width: 50%;
   height: 12%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .numPost_post_show {
   margin: 0;
+  width: 60%;
 }
 
 .textPost_post_show {
@@ -50,6 +51,7 @@ html {
   margin: 4% 1% 0.5% 1%;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: space-between;
 }
 

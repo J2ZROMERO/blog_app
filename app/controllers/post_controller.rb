@@ -21,6 +21,9 @@ class PostController < ApplicationController
 
   def show
     @stylesheet = 'post/show'
-    @post = Post.new(id: params[:id]) # object no proper of the database we use new instead of find
+    @post = Post.find_by(id: params[:id],author_id: params[:user_id])
+    @comments_count_by_post = Comment.where(posts_id: params[:id] , author_id: params[:user_id]).count
+    @likes_count_by_post =  Post.group(:id).find_by(id: params[:id],author_id: params[:user_id]).LikesCounter
+    @comments_by_post = Comment.where(author_id: params[:user_id] , posts_id: params[:id])
   end
 end
