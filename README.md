@@ -32,7 +32,6 @@
 
 >  This is a project that is going to work as a blog app with the necessary characteristics to make it interactive.
 
-**[your_project__name]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -67,6 +66,8 @@
 
 - Load the project with prepared data once it is set it up.
 - Interaction with model and custom methods.
+- Add posts.
+- Add likes to posts. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -20,57 +20,51 @@ class PostsController < ApplicationController
     @stylesheet = 'post/show'
     @post_id = Post.find(params[:id])
 
-    
+
     @post = Post.find_by(id: params[:id], author_id: params[:user_id])
     @comments_count_by_post = Comment.where(posts_id: params[:id], author_id: params[:user_id]).count
     @likes_count_by_post = Post.group(:id).find_by(id: params[:id], author_id: params[:user_id]).LikesCounter
     @comments_by_post = Comment.where(author_id: params[:user_id], posts_id: params[:id])
   end
 
-
   def like
-   @like = Post.find_by(author_id: ApplicationController.current_user.id, id: params[:id])
-   @likes_counter = Post.find_by(author_id: ApplicationController.current_user.id, id: params[:id]).LikesCounter
-   if @like.update(LikesCounter: @likes_counter + 1)
+    @like = Post.find_by(author_id: ApplicationController.current_user.id, id: params[:id])
+    @likes_counter = Post.find_by(author_id: ApplicationController.current_user.id, id: params[:id]).LikesCounter
+    if @like.update(LikesCounter: @likes_counter + 1)
 
-    Like.update_likes_counter(ApplicationController.current_user.id ,  params[:id])
-    flash[:notice] = "Like created successfully"
-    redirect_to  user_post_path
-  else
-    flash[:alert] = "Error whe the  was created"
-    render 'new'
+      Like.update_likes_counter(ApplicationController.current_user.id, params[:id])
+      flash[:notice] = 'Like created successfully'
+      redirect_to user_post_path
+    else
+      flash[:alert] = 'Error whe the  was created'
+      render 'new'
 
-end
-
+    end
   end
 
   def new
     @stylesheet = 'post/show'
     @post = Post.new
-    
-  end  
+  end
 
   def create
     @id_user = ApplicationController.current_user.id
-       @post = Post.new(author_id: @id_user, Title: params[:post][:Title], Text: params[:post][:Text],CommentsCounter: 0,LikesCounter: 0 )
-        if @post.save
-          flash[:notice] = "post created successfully"
-          redirect_to  user_path(@id_user)
-      
-        else
-          flash[:alert] = "Error whe the post was created"
-          render 'new'
-    
-      end
-      
-    end
-    
-    private
-    
-    def post_params
-    params.require(:posts).permit(:title, :text)
-    end
-    
-  
+    @post = Post.new(author_id: @id_user, Title: params[:post][:Title], Text: params[:post][:Text],
+                     CommentsCounter: 0, LikesCounter: 0)
+    if @post.save
+      flash[:notice] = 'post created successfully'
+      redirect_to user_path(@id_user)
 
+    else
+      flash[:alert] = 'Error whe the post was created'
+      render 'new'
+
+    end
+  end
+
+  private
+
+  def post_params
+    params.require(:posts).permit(:title, :text)
+  end
 end
