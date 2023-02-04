@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   layout 'application'
   def index
     @stylesheet = 'user/user'

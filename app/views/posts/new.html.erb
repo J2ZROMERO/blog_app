@@ -1,9 +1,12 @@
-<h1>New post</h1>
+<h1>New Post</h1>
 
-<%= render "form", post: @post %>
+<%= form_with(model: @post,url: user_posts_path(:user_id => 1), method: :post, local: true)  do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :Title %>
 
-<br>
+  <%= form.label :text %>
+  <%= form.text_area :Text %>
+  
+  <%= form.submit %>
 
-<div>
-  <%= link_to "Back to posts", posts_path %>
-</div>
+<% end %>

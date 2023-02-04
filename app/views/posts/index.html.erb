@@ -1,14 +1,28 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Posts</h1>
+  
+  <div class="subParentContent_post_index">
+  <div class="contentIconName_post_index"> 
+  <div class="contentIcon_post_index">  <%= image_tag @users.Photo, alt: "adadasda", class: "contentIcon" %>  
+  </div> 
+  <div class="contentNamePost_post_index">
+      <h2 class="name_post_index"><%= @users.Name %></h2>
+       <h3 class="numberPosts_post_index">Number of posts: <%= @posts_counter%></h3> 
+      </div> 
+  </div>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
+  <ul id="posts_li_post_index">
+  <% @posts.each  do |post|  %>
+    
+    <%= render "posts/user_post", post: post %>
 
-<%= link_to "New post", new_post_path %>
+
+   
+    <%end%>
+
+  </ul>
+  
+  <button type="button" class="seeAllpostsButton_post_index">Pagination</button>
+  </div>
+  </div>
+
+    

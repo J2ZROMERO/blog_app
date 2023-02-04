@@ -1,9 +1,10 @@
 <h1>New comment</h1>
 
-<%= render "form", comment: @comment %>
+<%= form_with(model: @comment, local: true, url: user_post_comments_path )  do |form| %>
+  
+  <%= form.label :text %>
+  <%= form.text_area :text %>
+  
+  <%= form.submit %>
 
-<br>
-
-<div>
-  <%= link_to "Back to comments", comments_path %>
-</div>
+<% end %>

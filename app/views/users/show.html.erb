@@ -1,10 +1,31 @@
-<p style="color: green"><%= notice %></p>
+  <div class="subParentContent_user_show">
+  <div class="contentIconName_user_show"> 
+  <div class="contentIcon_user_show">  <%= image_tag @users.Photo, alt: "No available", class: "contentIcon_user_show" %>  
+  </div>
+  <div class="contentNamePost_user_show">
+      <h2 class="name_user_show"><%=  @users.Name%></h2>
+       <h3 class="numberPosts_user_show">Number of posts: <%= @posts_counter %></h3> 
+      </div> 
+  </div>
+  <div class="bio_user_show"> <p class="InBio_user_show"> Bio  <br><br> 
+  <%= @users.Bio %>
+  </p>
 
-<%= render @user %>
+  </div>
+  
+  <ul id="posts_li_user_show">
 
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
+   
+    <% @posts.each do |post|%>
+    <%= render "users/bio", post: post %>
+   
+<% end %>
 
-  <%= button_to "Destroy this user", @user, method: :delete %>
-</div>
+  </ul>
+  <%= link_to "Create new post", new_user_post_path(:user_id => ApplicationController.current_user.id) , class: "btn btn-primary" %>
+  <button type="button" class="seeAllpostsButton_user_show">See all posts</button>
+  </div>
+  
+  
+  </div>
+
