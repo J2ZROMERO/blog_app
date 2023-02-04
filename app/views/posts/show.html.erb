@@ -1,10 +1,31 @@
-<p style="color: green"><%= notice %></p>
+  <div class="postComment_post_show">
 
-<%= render @post %>
+    
+        <div class="postSection_post_show"> 
+         <h2 class="numPost_post_show">Post <%= @post.id %> By  <%= @post.user.Name %></h2>
+        <h3 class="comLikesPost_post_show">
+        Comments: <%= @comments_count_by_post %>, 
+        Likes: <%= @likes_count_by_post %> </h3>
+        <p class="textPost_post_show">
+        <%= @post.Text %> 
+        </p>
+        </div>
+        <ul class="commentSection_post_show"> 
 
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+        <% @comments_by_post.each do |comment| %>
+        <li class="commentByUser_post_show">
+        <h2 class="userComment_post_show"> <%= comment.user.Name %> :  
+         <h3 class="commentMessage_post_show"> <%= comment.Text %></h3> 
+        </h2>
+         </li> 
+         <% end %>
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
-</div>
+        </ul>
+
+        <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %>">
+              <%= value %>
+            </div>
+          <% end %>
+          
+  </div>

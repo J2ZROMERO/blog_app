@@ -1,22 +1,11 @@
-<div id="<%= dom_id user %>">
-  <p>
-    <strong>Name:</strong>
-    <%= user.Name %>
-  </p>
-
-  <p>
-    <strong>Photo:</strong>
-    <%= user.Photo %>
-  </p>
-
-  <p>
-    <strong>Bio:</strong>
-    <%= user.Bio %>
-  </p>
-
-  <p>
-    <strong>Postscounter:</strong>
-    <%= user.PostsCounter %>
-  </p>
-
-</div>
+<li class="contentIconName_user_index"> 
+  
+  <div class="contentIcon_user_index">  
+      <%= image_tag user.Photo, alt: "No available", class: "contentIcon_user_index" %> 
+  </div> 
+  
+  <div class="contentNamePost_user_index">
+      <h2 class="name_user_index"><%=user.Name%></h2>
+       <h3 class="numberPosts_user_index">Number of posts:  <%= @posts_count_by_user[user.id] %></h3> 
+      </div> 
+<li/>

@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  root to: 'user#index'
+  root to: 'users#index'
 
-  resources :user,only: [:show] do 
-    resources :post, only: [:index, :show]
+
+resources :posts
+
+  resources :users,only: [:show, :new] do 
+    resources :posts, only: [:index, :show, :new]
 end
 
 

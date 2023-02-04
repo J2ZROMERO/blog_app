@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   layout 'application'
   def index
     @stylesheet = 'user/user'
@@ -21,4 +21,8 @@ class UserController < ApplicationController
       @likes_count_by_post[post.id] = Post.group(:id).find_by(id: post.id, author_id: params[:id]).LikesCounter
     end
   end
+
+def new
+end  
+
 end
