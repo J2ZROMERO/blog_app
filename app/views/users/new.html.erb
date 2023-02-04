@@ -1,6 +1,6 @@
-<h1>Nuevo artículo</h1>
+<h1>New post</h1>
 
-<%= form_with(model: @post, local: true, url:users_path) do |form| %>
+<%= form_with(model: @post, local: true, url: new_user_post_path(:user_id => ApplicationController.current_user.id)) do |form| %>
   <%= form.label :title %>
   <%= form.text_field :title %>
 
@@ -8,6 +8,5 @@
   <%= form.text_area :text %>
   
   <%= form.submit %>
-<%= @s %>
 
 <% end %>
