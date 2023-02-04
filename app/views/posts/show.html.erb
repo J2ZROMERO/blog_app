@@ -9,7 +9,13 @@
         <p class="textPost_post_show">
         <%= @post.Text %> 
         </p>
+
+        <%= button_to 'Like', like_user_post_path(:user_id => 1), method: :post %>
+
+        <%= @like %>
+
         </div>
+        
         <ul class="commentSection_post_show"> 
 
         <% @comments_by_post.each do |comment| %>
@@ -17,6 +23,7 @@
         <h2 class="userComment_post_show"> <%= comment.user.Name %> :  
          <h3 class="commentMessage_post_show"> <%= comment.Text %></h3> 
         </h2>
+        
          </li> 
          <% end %>
 

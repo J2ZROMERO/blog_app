@@ -27,9 +27,25 @@ class PostsController < ApplicationController
     @comments_by_post = Comment.where(author_id: params[:user_id], posts_id: params[:id])
   end
 
+
+  def like
+   @like = Post.find_by(author_id: ApplicationController.current_user.id, id: params[:id])
+   @likes_counter = Post.find_by(author_id: ApplicationController.current_user.id, id: params[:id]).LikesCounter
+   if @like.update(LikesCounter: @likes_counter + 1)
+    flash[:notice] = "Like created successfully"
+    redirect_to  user_posts_path
+  else
+    flash[:alert] = "Error whe the  was created"
+    render 'new'
+
+end
+
+  end
+
   def new
     @stylesheet = 'post/show'
     @post = Post.new
+    
   end  
 
   def create
