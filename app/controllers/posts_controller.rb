@@ -34,7 +34,7 @@ class PostsController < ApplicationController
 
   def create
     @id_user = ApplicationController.current_user.id
-       @post = Post.new(author_id: @id_user, Title: "asda", Text: "asdas",CommentsCounter: 0,LikesCounter: 0 )
+       @post = Post.new(author_id: @id_user, Title: params[:post][:Title], Text: params[:post][:Text],CommentsCounter: 0,LikesCounter: 0 )
         if @post.save
           flash[:notice] = "post created successfully"
           redirect_to  user_path(@id_user)
@@ -49,7 +49,7 @@ class PostsController < ApplicationController
     
     private
     
-    def article_params
+    def post_params
     params.require(:posts).permit(:title, :text)
     end
     

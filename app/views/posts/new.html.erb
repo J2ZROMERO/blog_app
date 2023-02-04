@@ -2,10 +2,10 @@
 
 <%= form_with(model: @post,url: user_posts_path(:user_id => 1), method: :post, local: true)  do |form| %>
   <%= form.label :title %>
-  <%= form.text_field :title %>
+  <%= form.text_field :Title %>
 
   <%= form.label :text %>
-  <%= form.text_area :text %>
+  <%= form.text_area :Text %>
   
   <%= form.submit %>
 
