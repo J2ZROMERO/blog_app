@@ -32,8 +32,10 @@ class PostsController < ApplicationController
    @like = Post.find_by(author_id: ApplicationController.current_user.id, id: params[:id])
    @likes_counter = Post.find_by(author_id: ApplicationController.current_user.id, id: params[:id]).LikesCounter
    if @like.update(LikesCounter: @likes_counter + 1)
+
+    Like.update_likes_counter(ApplicationController.current_user.id ,  params[:id])
     flash[:notice] = "Like created successfully"
-    redirect_to  user_posts_path
+    redirect_to  user_post_path
   else
     flash[:alert] = "Error whe the  was created"
     render 'new'
