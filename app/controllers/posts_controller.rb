@@ -19,7 +19,6 @@ class PostsController < ApplicationController
   def show
     @stylesheet = 'post/show'
     @post_id = Post.find(params[:id])
-
     @post = Post.find_by(id: params[:id], author_id: params[:user_id])
     @comments_count_by_post = Comment.where(posts_id: params[:id], author_id: params[:user_id]).count
     @likes_count_by_post = Post.group(:id).find_by(id: params[:id], author_id: params[:user_id]).LikesCounter
