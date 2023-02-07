@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     @posts.each do |post|
       @comments_count_by_post[post.id] = Comment.where(posts_id: post.id, author_id: params[:user_id]).count
       @likes_count_by_post[post.id] = Post.group(:id).find_by(id: post.id, author_id: params[:user_id]).LikesCounter
-      @comments_by_post[post.id] = Comment.where(author_id: params[:user_id], posts_id: post.id)
+      @comments_by_post[post.id] = Comment.includes(:user).where(author_id: params[:user_id], posts_id: post.id)
     end
   end
 
