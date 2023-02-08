@@ -2,8 +2,6 @@ require 'database_cleaner'
 require 'rails_helper'
 require 'spec_helper'
 
-
-
 RSpec.describe 'UsersController', type: :system do
   before(:each) do
     # Create users
@@ -19,8 +17,6 @@ RSpec.describe 'UsersController', type: :system do
     @second_comment = Comment.create(posts_id: @first_post.id, author_id: @user.id, Text: 'Hi Tom!')
   end
 
-
-
   describe 'index' do
     it 'I can see the profile picture for the user selected' do
       # navigate to the index page with the especific index.
@@ -31,7 +27,6 @@ RSpec.describe 'UsersController', type: :system do
     end
   end
 
-
   describe 'index' do
     it 'shows the username' do
       # Visit the index user path
@@ -40,7 +35,6 @@ RSpec.describe 'UsersController', type: :system do
       assert page.has_content?(@user.Name)
     end
   end
-
 
   describe 'index' do
     it 'I can see the number of posts a user has written' do
@@ -61,7 +55,6 @@ RSpec.describe 'UsersController', type: :system do
     end
   end
 
-
   describe 'index' do
     it 'I can see some of the text body' do
       # Visit the index user path
@@ -71,7 +64,6 @@ RSpec.describe 'UsersController', type: :system do
       expect(post_body).to have_content(@first_post.Text)
     end
   end
-
 
   describe 'index' do
     it 'I can see the first comments on a post.' do

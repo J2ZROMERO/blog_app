@@ -2,8 +2,6 @@ require 'database_cleaner'
 require 'rails_helper'
 require 'spec_helper'
 
-
-
 RSpec.describe 'UsersController', type: :system do
   before(:each) do
     # Create users
@@ -32,7 +30,6 @@ RSpec.describe 'UsersController', type: :system do
     end
   end
 
-
   describe 'index' do
     it 'I can see the profile picture for each user' do
       # navigate to the index page
@@ -54,7 +51,6 @@ RSpec.describe 'UsersController', type: :system do
       end
     end
   end
-
 
   describe 'index' do
     it 'When I click on a user, I am redirected to that users show page' do

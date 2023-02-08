@@ -2,8 +2,6 @@ require 'database_cleaner'
 require 'rails_helper'
 require 'spec_helper'
 
-
-
 RSpec.describe 'UsersController', type: :system do
   before(:each) do
     # Create users
@@ -17,8 +15,6 @@ RSpec.describe 'UsersController', type: :system do
                               CommentsCounter: 0)
   end
 
-
-
   describe 'show' do
     it 'I can see the profile picture for the user selected' do
       # navigate to the index page with the especific index.
@@ -29,8 +25,6 @@ RSpec.describe 'UsersController', type: :system do
     end
   end
 
-
-
   describe 'show' do
     it 'shows the username' do
       # Visit the index user path
@@ -39,7 +33,6 @@ RSpec.describe 'UsersController', type: :system do
       assert page.has_content?(@user.Name)
     end
   end
-
 
   describe 'show' do
     it 'I can see the number of posts a user has written' do
@@ -70,7 +63,6 @@ RSpec.describe 'UsersController', type: :system do
       assert page.has_content?('Post 3')
     end
   end
-
 
   describe 'show' do
     it 'I can see the button that lets me view all of a user\'s posts' do
