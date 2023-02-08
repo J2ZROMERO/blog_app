@@ -8,11 +8,11 @@ RSpec.describe 'UsersController', type: :system do
     @user = User.create(Name: 'Carla', Photo: 'https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg', Bio:
     'Lorem ipsum dolor sit amet sss labore fugiat!.', PostsCounter: 0)
     @first_post = Post.create(author_id: @user.id, Title: 'The jungle', Text: 'Lorem ipsum fugiat!', LikesCounter: 5,
-                              CommentsCounter: 0)
+                              CommentsCounter: 0, email: 'juan@hotmail.com', password: '1234567')
     @second_post = Post.create(author_id: @user.id, Title: 'The animals', Text: 'Lorem ipsum fugiat!',
-                               LikesCounter: 1, CommentsCounter: 0)
+                               LikesCounter: 1, CommentsCounter: 0, email: 'juan@hotmail.com', password: '1234567')
     @third_post = Post.create(author_id: @user.id, Title: 'The food', Text: 'Lorem ipsum fugiat!', LikesCounter: 1,
-                              CommentsCounter: 0)
+                              CommentsCounter: 0, email: 'juan@hotmail.com', password: '1234567')
   end
 
   describe 'show' do
