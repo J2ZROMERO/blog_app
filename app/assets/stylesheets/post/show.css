@@ -66,7 +66,7 @@ html {
   font-size: 1.1em;
 }
 
-[class^="commentByUser_post_show_"]  {
+[class^="commentByUser_post_show_"] {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -74,6 +74,6 @@ html {
   height: 25px;
 }
 
-.title_post_show{
+.title_post_show {
   width: 100%;
 }
