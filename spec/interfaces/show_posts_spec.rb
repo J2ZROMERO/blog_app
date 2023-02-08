@@ -20,36 +20,37 @@ RSpec.describe 'UsersController', type: :system do
 
   describe 'show' do
     it 'I can see the posts title' do
-      # Visit the index user path
       visit user_post_path(:user_id => @user.id, :id => @first_post.id)
-      # wait for the answer of the test
         assert page.has_content?(@first_post.Title)
     end
   end
 
   describe 'show' do
     it 'I can see who wrote the post' do
-      
       visit user_post_path(:user_id => @user.id, :id => @first_post.id)
-       # check that the user's  post  is displayed on the show view
        assert page.has_content?("Post 1 By #{@user.Name}")
     end 
   end
 
   describe 'show' do
     it 'I can see how many comments it has' do
-      
       visit user_post_path(:user_id => @user.id, :id => @first_post.id)
-       # check that the user's  post  is displayed on the show view
        comment_count = all(".userComment_post_show").count
        expect(comment_count).to eq(2)
     end 
   end
   
   describe 'show' do
-    it 'I can see the post body' do
+    it 'I can see how many Likes it has' do
       visit user_post_path(:user_id => @user.id, :id => @first_post.id)
-       # check that the user's  post  is displayed on the show view       
+       likes = find(".comLikesPost_post_show")
+       expect(likes).to have_content("Likes: 5")
+    end 
+  end
+
+  describe 'show' do
+    it 'I can see the post body' do
+      visit user_post_path(:user_id => @user.id, :id => @first_post.id)   
        post_body = find(".textPost_post_show_1").text
        expect(post_body).to have_content(@first_post.Text)
     end 
@@ -57,8 +58,7 @@ RSpec.describe 'UsersController', type: :system do
 
   describe 'show' do
     it 'I can see the user name of each commentor' do
-      visit user_post_path(:user_id => @user.id, :id => @first_post.id)
-       # check that the user's  post  is displayed on the show view       
+      visit user_post_path(:user_id => @user.id, :id => @first_post.id)  
        expect(page).to have_content(@user2.Name)
        expect(page).to have_content(@user3.Name)
     end 
@@ -66,11 +66,9 @@ RSpec.describe 'UsersController', type: :system do
   
   describe 'show' do
     it 'I can see the comment of each commentor left' do
-      visit user_post_path(:user_id => @user.id, :id => @first_post.id)
-       # check that the user's  post  is displayed on the show view       
+      visit user_post_path(:user_id => @user.id, :id => @first_post.id)   
        user1 = find(".commentByUser_post_show_1")
        user2 = find(".commentByUser_post_show_2")
-
        expect(user1).to have_content("Hi Tom!")
        expect(user2).to have_content("Hi great content!")
     end 
