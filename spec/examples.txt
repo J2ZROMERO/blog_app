@@ -1,0 +1,30 @@
+example_id                                    | status | run_time        |
+--------------------------------------------- | ------ | --------------- |
+./spec/interfaces/index_posts_spec.rb[1:1:1]  | passed | 0.81001 seconds |
+./spec/interfaces/index_posts_spec.rb[1:2:1]  | passed | 0.83266 seconds |
+./spec/interfaces/index_posts_spec.rb[1:3:1]  | passed | 0.89583 seconds |
+./spec/interfaces/index_posts_spec.rb[1:4:1]  | passed | 5.98 seconds    |
+./spec/interfaces/index_posts_spec.rb[1:5:1]  | passed | 0.91531 seconds |
+./spec/interfaces/index_posts_spec.rb[1:6:1]  | passed | 0.84098 seconds |
+./spec/interfaces/index_posts_spec.rb[1:7:1]  | passed | 0.83158 seconds |
+./spec/interfaces/index_posts_spec.rb[1:8:1]  | passed | 0.7899 seconds  |
+./spec/interfaces/index_posts_spec.rb[1:9:1]  | passed | 0.79885 seconds |
+./spec/interfaces/index_posts_spec.rb[1:10:1] | passed | 0.79044 seconds |
+./spec/interfaces/index_users_spec.rb[1:1:1]  | passed | 0.94075 seconds |
+./spec/interfaces/index_users_spec.rb[1:2:1]  | passed | 0.96441 seconds |
+./spec/interfaces/index_users_spec.rb[1:3:1]  | passed | 0.89881 seconds |
+./spec/interfaces/index_users_spec.rb[1:4:1]  | passed | 5.73 seconds    |
+./spec/interfaces/show_posts_spec.rb[1:1:1]   | passed | 0.80271 seconds |
+./spec/interfaces/show_posts_spec.rb[1:2:1]   | passed | 5.64 seconds    |
+./spec/interfaces/show_posts_spec.rb[1:3:1]   | passed | 1.07 seconds    |
+./spec/interfaces/show_posts_spec.rb[1:4:1]   | passed | 0.8491 seconds  |
+./spec/interfaces/show_posts_spec.rb[1:5:1]   | passed | 0.87413 seconds |
+./spec/interfaces/show_posts_spec.rb[1:6:1]   | passed | 0.92814 seconds |
+./spec/interfaces/show_users_spec.rb[1:1:1]   | passed | 0.8071 seconds  |
+./spec/interfaces/show_users_spec.rb[1:2:1]   | passed | 0.88953 seconds |
+./spec/interfaces/show_users_spec.rb[1:3:1]   | passed | 5.74 seconds    |
+./spec/interfaces/show_users_spec.rb[1:4:1]   | passed | 0.86601 seconds |
+./spec/interfaces/show_users_spec.rb[1:5:1]   | passed | 0.91592 seconds |
+./spec/interfaces/show_users_spec.rb[1:6:1]   | passed | 1.01 seconds    |
+./spec/interfaces/show_users_spec.rb[1:7:1]   | passed | 0.79979 seconds |
+./spec/interfaces/show_users_spec.rb[1:8:1]   | passed | 0.92441 seconds |

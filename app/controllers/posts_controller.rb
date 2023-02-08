@@ -12,18 +12,17 @@ class PostsController < ApplicationController
     @posts.each do |post|
       @comments_count_by_post[post.id] = Comment.where(posts_id: post.id, author_id: params[:user_id]).count
       @likes_count_by_post[post.id] = Post.group(:id).find_by(id: post.id, author_id: params[:user_id]).LikesCounter
-      @comments_by_post[post.id] = Comment.where(author_id: params[:user_id], posts_id: post.id)
+      @comments_by_post[post.id] = Comment.includes(:user).where(author_id: params[:user_id], posts_id: post.id)
     end
   end
 
   def show
     @stylesheet = 'post/show'
     @post_id = Post.find(params[:id])
-
     @post = Post.find_by(id: params[:id], author_id: params[:user_id])
     @comments_count_by_post = Comment.where(posts_id: params[:id], author_id: params[:user_id]).count
     @likes_count_by_post = Post.group(:id).find_by(id: params[:id], author_id: params[:user_id]).LikesCounter
-    @comments_by_post = Comment.where(author_id: params[:user_id], posts_id: params[:id])
+    @comments_by_post = Comment.includes(:post).where(posts_id: params[:id])
   end
 
   def like

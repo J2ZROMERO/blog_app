@@ -7,6 +7,6 @@ class User < ApplicationRecord
   validates :PostsCounter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def self.see_3recent_posts(id)
-    Post.where(author_id: id).last(3)
+    Post.includes(:user).where(author_id: id).last(3)
   end
 end

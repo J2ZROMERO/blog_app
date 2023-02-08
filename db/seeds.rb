@@ -13,19 +13,19 @@ def add_data
     third_user = User.create(Name: 'Richard', Photo: 'https://unsplash.com/photos/F_-0BxGuVvo', Bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque alias repellat as
     periores quos eos commodi quibusdam et dolores placeat atque eius, ad excepturi corrupti labore fugiat!.',PostsCounter: 0)
     
-    first_post = Post.create(author_id: first_user.id, Title: 'Hello', Text:  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque alias 
+    first_post = Post.create(author_id: first_user.id, Title: 'The jungle', Text:  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque alias 
     repellat asperiores quos eos commodi quibusdam et dolores placeat atque eius, ad excepturi corrupti labore fugiat!', LikesCounter: 1, CommentsCounter: 0)
-    second_post = Post.create(author_id: second_user.id, Title: 'Cats', Text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque 
+    second_post = Post.create(author_id: second_user.id, Title: 'The cats', Text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque 
     alias repellat asperiores quos eos commodi quibusdam et dolores placeat atque eius, ad excepturi corrupti labore fugiat!', LikesCounter: 9, CommentsCounter: 0)
-    third_post = Post.create(author_id: second_user.id, Title: 'Birds', Text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque 
+    third_post = Post.create(author_id: second_user.id, Title: 'Animals or pets', Text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque 
     alias repellat asperiores quos eos commodi quibusdam et dolores placeat atque eius, ad excepturi corrupti labore fugiat!', LikesCounter: 3, CommentsCounter: 0)
-    four_post = Post.create(author_id: first_user.id, Title: 'Bear', Text:    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque 
+    four_post = Post.create(author_id: first_user.id, Title: 'The weater', Text:    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque 
     alias repellat asperiores quos eos commodi quibusdam et dolores placeat atque eius, ad excepturi corrupti labore fugiat!', LikesCounter: 8, CommentsCounter: 0)
-    five_post = Post.create(author_id: first_user.id, Title: 'Bear', Text:    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque 
+    five_post = Post.create(author_id: first_user.id, Title: 'Are you tired?', Text:    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque 
     alias repellat asperiores quos eos commodi quibusdam et dolores placeat atque eius, ad excepturi corrupti labore fugiat!', LikesCounter: 5, CommentsCounter: 0)
-    six_post = Post.create(author_id: first_user.id, Title: 'Bear', Text:     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque 
+    six_post = Post.create(author_id: first_user.id, Title: 'Pros and cons', Text:     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque 
     alias repellat asperiores quos eos commodi quibusdam et dolores placeat atque eius, ad excepturi corrupti labore fugiat!', LikesCounter: 10, CommentsCounter: 0)
-    seven_post = Post.create(author_id: first_user.id, Title: 'Bear', Text:   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque     
+    seven_post = Post.create(author_id: first_user.id, Title: 'The food', Text:   'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus sint facere neque     
     alias repellat asperiores quos eos commodi quibusdam et dolores placeat atque eius, ad excepturi corrupti labore fugiat!', LikesCounter: 13, CommentsCounter: 0)
 
     Comment.create(posts_id: first_post.id, author_id: first_user.id, Text: 'Hi Tom!' )

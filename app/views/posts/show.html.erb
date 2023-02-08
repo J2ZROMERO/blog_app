@@ -6,7 +6,8 @@
         <h3 class="comLikesPost_post_show">
         Comments: <%= @comments_count_by_post %>, 
         Likes: <%= @likes_count_by_post %> </h3>
-        <p class="textPost_post_show">
+        <h2 class="title_post_show"><%= @post.Title %>  </h2>
+        <p class="textPost_post_show_<%= @post.id %>">
         <%= @post.Text %> 
         </p>
 
@@ -19,9 +20,9 @@
         <ul class="commentSection_post_show"> 
 
         <% @comments_by_post.each do |comment| %>
-        <li class="commentByUser_post_show">
+        <li class="commentByUser_post_show_<%= comment.id %>">
         <h2 class="userComment_post_show"> <%= comment.user.Name %> :  
-         <h3 class="commentMessage_post_show"> <%= comment.Text %></h3> 
+         <h3 class="commentMessage_post_show_<%= comment.id %>"> <%= comment.Text %></h3> 
         </h2>
         
          </li> 

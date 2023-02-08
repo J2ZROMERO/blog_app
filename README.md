@@ -68,7 +68,8 @@
 - Interaction with model and custom methods.
 - Add posts.
 - Add likes to posts. 
-
+- Execute Capybara tests.
+- 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
@@ -162,7 +163,9 @@ To run the project, execute the following command:
 - or execute rspec spec/models/NAME-OF-THE-MODEL_spec.rb  if you want to run a especific file.
 - If you want to see the tests existing and their definitions please run: " rspec --force-color --format documentation "
 - To check the tests's controllers please execute the next command on your root project console: "" rspec spec/requests/ ""  you will see all the tests' controllers in execution.
-
+- In order to see Capybara tests you can execute:
+  " rspec spec/interfaces" all the tests.
+  " rspec spec/interfaces/show_posts_spec.rb " single file.
 ### Deployment
 
 You can deploy this project using:

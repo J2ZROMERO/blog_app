@@ -1,7 +1,8 @@
 <li id="p_item_post_index"> 
     
 <div class="postSection_post_index">  <h2 class="numPost_post_index">Post <%= post.id %> </h2>
-<p class="textPost_post_index"> <%= post.Text%> </p>
+<h2><%= post.Title %></h2>
+<p class="textPost_post_index_<%= post.id %>"> <%= post.Text%> </p>
 <h3 class="comLikesPost_post_index">
 Comments: <%= @comments_count_by_post[post.id] || 0 %>, 
 Likes: <%= @likes_count_by_post[post.id] || 0 %>,
@@ -12,7 +13,7 @@ Likes: <%= @likes_count_by_post[post.id] || 0 %>,
 
 <% @comments_by_post[post.id].each do |comment|%>
    
-    <div class="commentByUser_post_index">
+    <div class="commentByUser_post_index_<%= comment.id %>">
 <h2 class="userComment_post_index"><%= comment.user.Name %> : <h3 
 class="commentMessage_post_index"> <%= comment.Text %> </h3> 
 </h2>
