@@ -76,4 +76,5 @@ RSpec.describe 'UsersController', type: :system do
       expect(user2).to have_content('Hi great content!')
     end
   end
+  
 end
