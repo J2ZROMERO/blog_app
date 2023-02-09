@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'users#index'
+  devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
 
-  resources :users,only: [:show, :new] do 
+  devise_scope :user do
+    root to: "users/sessions#new"
+  end
+  
+  
+
+  resources :users,only: [:index, :show, :new] do 
     resources :posts, only: [:index, :show,:new, :create] do    
       post :like, on: :member
       resources :comments, only: [:new, :create] 
