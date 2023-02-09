@@ -1,0 +1,44 @@
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  border: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_login {
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h2 {
+  font-size: 4em;
+  margin: 8% 0 2% 0;
+}
+
+.field {
+  width: 60%;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2%;
+}
+
+input#user_email,
+input#user_password {
+  width: 60%;
+}

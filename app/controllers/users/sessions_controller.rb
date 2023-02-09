@@ -9,7 +9,7 @@ class Users::SessionsController < Devise::SessionsController
 
   # GET /resource/sign_in
   def new
-    @stylesheet = 'post/post'
+    @stylesheet = 'user/login'
     @user = User.new
   end
 

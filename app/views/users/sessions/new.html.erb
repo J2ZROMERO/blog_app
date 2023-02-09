@@ -1,5 +1,5 @@
 <h2>Log in</h2>
-<%= form_with(model: @user, local: true, url: user_session_path, method: :post) do |f| %>
+<%= form_with(model: @user, local: true, url: user_session_path, method: :post, class: "form_login") do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
