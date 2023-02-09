@@ -6,20 +6,7 @@ class Users::PasswordsController < Devise::PasswordsController
   end
 
   # POST /resource/password
-  def create
-    @stylesheet = 'post/post'
-    if params[:user].present? && params[:user][:email].present?
-      super
-    else
-      flash[:error] = 'Email is required'
-    end
-  end
-
-  private
-
-  def resource_params
-    params.require(:user).permit(:email)
-  end
+ #
 
   # GET /resource/password/edit?reset_password_token=abcdef
   # def edit
