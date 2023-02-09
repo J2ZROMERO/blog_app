@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Users::PasswordsController < Devise::PasswordsController
   # GET /resource/password/new
   def new
@@ -8,26 +6,20 @@ class Users::PasswordsController < Devise::PasswordsController
   end
 
   # POST /resource/password
-   def create
-     @stylesheet = 'post/post'
+  def create
+    @stylesheet = 'post/post'
     if params[:user].present? && params[:user][:email].present?
-      email = params[:user][:email]
-  
-
-     super
-
+      super
     else
-      flash[:error] = "Email is required"
-      
+      flash[:error] = 'Email is required'
     end
-    
-   end
+  end
 
   private
 
-def resource_params
-  params.require(:user).permit(:email)
-end
+  def resource_params
+    params.require(:user).permit(:email)
+  end
 
   # GET /resource/password/edit?reset_password_token=abcdef
   # def edit

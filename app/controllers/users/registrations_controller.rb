@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
@@ -13,21 +11,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    
     @user = User.new(user_params)
-    @user.PostsCounter ||= 10
-    puts params
+    @user.PostsCounter ||= 0
     if @user.save
-      # Aquí puedes agregar cualquier lógica adicional que necesites
-      redirect_to user_session_path and return
+      redirect_to user_session_path
     else
-      flash[:error] = @user.errors.full_messages.join(", ")
-
+      flash[:error] = @user.errors.full_messages.join(', ')
     end
   end
-  
+
   private
-  
+
   def user_params
     params.require(:user).permit(:Name, :Photo, :Bio, :email, :password)
   end

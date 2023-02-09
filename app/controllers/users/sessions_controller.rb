@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
-  
-  def after_sign_in_path_for(resource)
+
+  def after_sign_in_path_for(_resource)
     # Use the path of your desired view here
-     users_path
-    #root_path
+    users_path
+    # root_path
   end
 
   # GET /resource/sign_in
@@ -22,14 +20,12 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # DELETE /resource/sign_out
-  def destroy
-    super
-  end
+
 
   # def after_sign_out_path_for(resource_or_scope)
   #   root_path
   # end
-  
+
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.
