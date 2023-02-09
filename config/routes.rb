@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     root to: "users/sessions#new"
+    get '/users/sign_out', to: 'devise/sessions#destroy'
   end
   
   

@@ -21,5 +21,10 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
+<% if flash[:alert] %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
 
 <%= render "users/shared/links" %>

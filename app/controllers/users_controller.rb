@@ -7,8 +7,12 @@ class UsersController < ApplicationController
     @users.each do |user|
       @posts_count_by_user[user.id] = Post.where(author_id: user.id).count
     end
+    if user_signed_in?
+      @current_user = current_user
+    end
+    
   end
-
+  
   def show
     @stylesheet = 'user/show'
     @users = User.find_by(id: params[:id]) # object no proper of the database we use new instead of find
@@ -21,4 +25,5 @@ class UsersController < ApplicationController
       @likes_count_by_post[post.id] = Post.group(:id).find_by(id: post.id, author_id: params[:id]).LikesCounter
     end
   end
+  
 end
