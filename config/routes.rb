@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
+  devise_for :users, controllers: { passwords: 'users/passwords',registrations: 'users/registrations', sessions: 'users/sessions' }
 
   devise_scope :user do
     root to: "users/sessions#new"
     get '/users/sign_out', to: 'devise/sessions#destroy'
+    get '/users/password', to: 'users/paswords#edit'
+    
   end
   
   
