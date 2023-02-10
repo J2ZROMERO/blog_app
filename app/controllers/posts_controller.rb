@@ -17,20 +17,17 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    return unless user_signed_in?
 
-
-    def destroy
-      return unless user_signed_in?
     @current_user = current_user
-      post = Post.find(params[:id])
-      user = User.find(params[:user_id])
-      post.comments.destroy_all
-      post.destroy
-      user.update(PostsCounter: user.posts.count)
-      redirect_to user_path(params[:id])
-    end
-  
-  
+    post = Post.find(params[:id])
+    user = User.find(params[:user_id])
+    post.comments.destroy_all
+    post.destroy
+    user.update(PostsCounter: user.posts.count)
+    redirect_to user_path(params[:id])
+  end
 
   def show
     @stylesheet = 'post/show'
@@ -38,15 +35,15 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @comments_count_by_post = Comment.where(posts_id: params[:id]).count
     @likes_count_by_post = Like.includes(:post).find_by(posts_id: params[:id])
-    
+
     if @likes_count_by_post.nil?
-      
-@likes_count_by_post = Like.create(author_id:  @current_user.id,posts_id: params[:id])
-else
-  @likes_count_by_post.post.LikesCounter
+
+      @likes_count_by_post = Like.create(author_id: @current_user.id, posts_id: params[:id])
+    else
+      @likes_count_by_post.post.LikesCounter
 
     end
-    
+
     @comments_by_post = Comment.includes(:post).where(posts_id: params[:id])
   end
 
@@ -59,7 +56,7 @@ else
     if @like
       @likes_counter = @like.post.LikesCounter
       if @like.post.update(LikesCounter: @likes_counter + 1)
-        
+
         flash[:notice] = 'Like created successfully'
         redirect_to user_post_path
       else
@@ -68,9 +65,9 @@ else
       end
     else
       flash[:alert] = 'Post not found'
-      Like.create(author_id:  @current_user.id,:posts_id => 33)
+      Like.create(author_id: @current_user.id, posts_id: 33)
 
-      Like.find_by(:author_id => @current_user.id,:posts_id => 33).post.LikesCounter = 1
+      Like.find_by(author_id: @current_user.id, posts_id: 33).post.LikesCounter = 1
     end
   end
 
@@ -78,24 +75,23 @@ else
     @stylesheet = 'post/show'
     @post = Post.new
     return unless user_signed_in?
+
     @current_user = current_user
   end
-
-
-
 
   def create
     @stylesheet = 'post/show'
     return unless user_signed_in?
+
     @current_user = current_user
-    
+
     @post = Post.new(author_id: @current_user.id, Title: params[:post][:Title], Text: params[:post][:Text],
                      CommentsCounter: 0, LikesCounter: 0)
     if @post.save
       flash[:notice] = 'post created successfully'
       ide = params[:id].to_i
       puts ide
-      redirect_to user_path(:id => @current_user.id)
+      redirect_to user_path(id: @current_user.id)
 
     else
       flash[:alert] = 'Error whe the post was created'

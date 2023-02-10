@@ -1,21 +1,19 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
   layout 'application'
-  
+
   def index
     @stylesheet = 'user/user'
     @users = User.all
     @posts_count_by_user = {}
-    
+
     @users.each do |user|
       @posts_count_by_user[user.id] = Post.where(author_id: user.id).count
-      
     end
     return unless user_signed_in?
 
     @current_user = current_user
   end
-
 
   def show
     @stylesheet = 'user/show'
@@ -27,6 +25,7 @@ class UsersController < ApplicationController
     @total_posts = {}
     @t = Post.find_by(author_id: 3)
     return unless user_signed_in?
+
     @current_user = current_user
 
     @posts.each do |post|
