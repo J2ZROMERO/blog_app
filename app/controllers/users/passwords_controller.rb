@@ -13,6 +13,11 @@ class Users::PasswordsController < Devise::PasswordsController
     super
   end
 
+  def create
+    @stylesheet = 'post/post'
+    super
+  end
+
   # PUT /resource/password
 
   # protected
