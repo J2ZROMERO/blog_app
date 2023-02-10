@@ -13,6 +13,7 @@ gem 'database_cleaner'
 
 gem 'devise'
 
+
 gem 'rails-controller-testing'
 
 # Use postgresql as the database for Active Record
@@ -59,6 +60,7 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'rspec-rails', '~> 4.0.0'
 
 group :development, :test do
+  gem 'letter_opener'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
