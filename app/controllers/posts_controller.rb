@@ -75,7 +75,9 @@ class PostsController < ApplicationController
                      CommentsCounter: 0, LikesCounter: 0)
     if @post.save
       flash[:notice] = 'post created successfully'
-      redirect_to user_path(params[:user_id])
+      ide = params[:id].to_i
+      puts ide
+      redirect_to user_path(:id => @current_user.id)
 
     else
       flash[:alert] = 'Error whe the post was created'
