@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     @current_user = current_user
 
     @posts.each do |post|
-      @comments_count_by_post[post.id] = Comment.where(posts_id: post.id, author_id: params[:id]).count
+      @comments_count_by_post[post.id] = Comment.where(posts_id: post.id).count
       @likes_count_by_post[post.id] = Post.group(:id).find_by(id: post.id, author_id: params[:id]).LikesCounter
       @total_posts[post.id] = Post.find_by(id: post.id)
     end

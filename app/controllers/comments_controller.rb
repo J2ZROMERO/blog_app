@@ -1,15 +1,29 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   def new
     @stylesheet = 'post/show'
     @comment = Comment.new
   end
 
+  def destroy
+    return unless user_signed_in?
+  @current_user = current_user
+    post = Post.find(params[:id])
+    user = User.find(params[:user_id])
+    post.comments.destroy_all
+    post.destroy
+    user.update(PostsCounter: user.posts.count)
+    redirect_to user_path(params[:id])
+  end
+
   def create
-    @id_user = ApplicationController.current_user.id
-    @comment = Comment.create(posts_id: params[:post_id], author_id: @id_user, Text: params[:comment][:text])
+    return unless user_signed_in?
+  @current_user = current_user
+
+    @comment = Comment.create(posts_id: params[:post_id], author_id: @current_user.id, Text: params[:comment][:text])
     if @comment.save
       flash[:notice] = 'post created successfully'
-      redirect_to user_post_path(user_id: @id_user, id: params[:post_id])
+      redirect_to user_post_path(user_id: @current_user.id, id: params[:post_id])
 
     else
       flash[:alert] = 'Error whe the post was created'

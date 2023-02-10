@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :users,only: [:index, :show, :new] do 
     resources :posts, only: [:index, :show,:new, :create, :destroy] do    
       post :like, on: :member
-      resources :comments, only: [:new, :create] 
+      resources :comments, only: [:new, :create, :destroy] 
       
   
     end

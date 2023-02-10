@@ -6,6 +6,8 @@ class Ability
     if user.role == 'admin'
       can :manage, :all
     else
+
+      can :create, Like
       can :read, Post
       can :read, User
       can :create, Post

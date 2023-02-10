@@ -2,10 +2,10 @@
 
     
         <div class="postSection_post_show"> 
-         <h2 class="numPost_post_show">Post <%= @post.id %> By  <%= @post.user.Name %></h2>
+         <h2 class="numPost_post_show">Post <%= @likes_count_by_post.post.id %> By  <%= @post.user.Name %></h2>
         <h3 class="comLikesPost_post_show">
         Comments: <%= @comments_count_by_post %>, 
-        Likes: <%= @likes_count_by_post %> </h3>
+        Likes: <%= @likes_count_by_post.post.LikesCounter %> </h3>
         <h2 class="title_post_show"><%= @post.Title %>  </h2>
         <p class="textPost_post_show_<%= @post.id %>">
         <%= @post.Text %> 
@@ -30,5 +30,6 @@
 
         </ul>
         <%= link_to "Create new comment", new_user_post_comment_path(:user_id => @current_user,:post_id => @post_id.id) , class: "btn btn-primary" %>        
+        
         
   </div>

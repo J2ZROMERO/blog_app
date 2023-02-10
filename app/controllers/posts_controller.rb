@@ -35,24 +35,42 @@ class PostsController < ApplicationController
   def show
     @stylesheet = 'post/show'
     @post_id = Post.find(params[:id])
-    @post = Post.find_by(id: params[:id], author_id: params[:user_id])
-    @comments_count_by_post = Comment.where(posts_id: params[:id], author_id: params[:user_id]).count
-    @likes_count_by_post = Post.group(:id).find_by(id: params[:id], author_id: params[:user_id]).LikesCounter
+    @post = Post.find_by(id: params[:id])
+    @comments_count_by_post = Comment.where(posts_id: params[:id]).count
+    @likes_count_by_post = Like.includes(:post).find_by(posts_id: params[:id])
+    
+    if @likes_count_by_post.nil?
+      
+@likes_count_by_post = Like.create(author_id:  @current_user.id,posts_id: params[:id])
+else
+  @likes_count_by_post.post.LikesCounter
+
+    end
+    
     @comments_by_post = Comment.includes(:post).where(posts_id: params[:id])
   end
 
   def like
-    @like = Post.find_by(author_id: ApplicationController.current_user.id, id: params[:id])
-    @likes_counter = Post.find_by(author_id: ApplicationController.current_user.id, id: params[:id]).LikesCounter
-    if @like.update(LikesCounter: @likes_counter + 1)
+    return unless user_signed_in?
 
-      Like.update_likes_counter(ApplicationController.current_user.id, params[:id])
-      flash[:notice] = 'Like created successfully'
-      redirect_to user_post_path
+    @current_user = current_user
+
+    @like = Like.find_by(author_id: @current_user.id, posts_id: params[:id])
+    if @like
+      @likes_counter = @like.post.LikesCounter
+      if @like.post.update(LikesCounter: @likes_counter + 1)
+        
+        flash[:notice] = 'Like created successfully'
+        redirect_to user_post_path
+      else
+        flash[:alert] = 'Error whe the like was created'
+        render 'new'
+      end
     else
-      flash[:alert] = 'Error whe the  was created'
-      render 'new'
+      flash[:alert] = 'Post not found'
+      Like.create(author_id:  @current_user.id,:posts_id => 33)
 
+      Like.find_by(:author_id => @current_user.id,:posts_id => 33).post.LikesCounter = 1
     end
   end
 
