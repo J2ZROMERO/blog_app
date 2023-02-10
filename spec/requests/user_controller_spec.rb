@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe UserController, type: :request do
   before(:each) do
-    @user = User.create!(id: 4, Name: 'Jose', PostsCounter: 4)
+    @user = User.create!(id: 4, Name: 'Jose', PostsCounter: 4, email: 'juan@hotmail.com', password: '1234567')
   end
 
   describe 'GET #index' do

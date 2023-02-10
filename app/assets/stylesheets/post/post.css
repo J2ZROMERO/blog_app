@@ -108,3 +108,11 @@ html {
   width: 100%;
   height: 25px;
 }
+
+.error-message {
+  padding: 10px;
+  background-color: #f33;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+}

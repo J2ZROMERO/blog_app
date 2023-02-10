@@ -64,12 +64,13 @@
 
 > The next key features are availble in this project.
 
+- Register yourself as a new user.
 - Load the project with prepared data once it is set it up.
 - Interaction with model and custom methods.
 - Add posts.
 - Add likes to posts. 
 - Execute Capybara tests.
-- 
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
@@ -151,6 +152,8 @@ To run the project, execute the following command:
 > Ruby bin/rails db:migrate
 
 - This command will ensure to load the models to tests it.
+
+- Once the
 ### Run tests
 
 - To run the tests please follow the next instruccions.
@@ -178,6 +181,8 @@ You can deploy this project using:
 > http://localhost:3000/user/745/post/3
 
 - You can change the id's [745 / 3] for another one available on the interfaz.
+- The seed file has 3 users with their passwords and emails you can acces with some of the credencials in there, just take a look at those queries in the seed file or log in with your data.
+- The Photo field must be an URL like = "https://this_is_myptoho.jpg"
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

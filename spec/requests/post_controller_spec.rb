@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe PostController, type: :request do
   before(:each) do
-    @user = User.create!(id: 4, Name: 'Jose', PostsCounter: 4)
+    @user = User.create!(id: 4, Name: 'Jose', PostsCounter: 4, email: 'juan@hotmail.com', password: '1234567')
     @post = Post.create!(id: 4, author_id: @user.id, Title: 'There is something', CommentsCounter: 4, LikesCounter: 5)
     @route = '/user/:user_id/post'
   end

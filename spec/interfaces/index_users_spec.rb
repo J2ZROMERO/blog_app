@@ -9,13 +9,13 @@ RSpec.describe 'UsersController', type: :system do
     @users = []
     @users << User.create(Name: 'Carla', Photo: 'https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg',
                           Bio: 'Lorem ipsum dolor sit amet
-    labore fugiat!.', PostsCounter: 0)
+    labore fugiat!.', PostsCounter: 0, email: 'juan@hotmail.com', password: '1234567')
     @users << User.create(Name: 'Luis', Photo: 'https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg',
                           Bio: 'Lorem ipsum dolor sit amet
-    labore fugiat!.', PostsCounter: 0)
+    labore fugiat!.', PostsCounter: 0, email: 'juan@hotmail.com', password: '1234567')
     @users << User.create(Name: 'Juan', Photo: 'https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg',
                           Bio: 'Lorem ipsum dolor sit amet
-    labore fugiat!.', PostsCounter: 0)
+    labore fugiat!.', PostsCounter: 0, email: 'juan@hotmail.com', password: '1234567')
   end
 
   describe 'index' do

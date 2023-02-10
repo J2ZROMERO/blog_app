@@ -6,7 +6,7 @@ RSpec.describe 'UsersController', type: :system do
   before(:each) do
     # Create users
     @user = User.create(Name: 'Carla', Photo: 'https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg', Bio:
-    'Lorem ipsum dolor sit amet sss labore fugiat!.', PostsCounter: 0)
+    'Lorem ipsum dolor sit amet sss labore fugiat!.', PostsCounter: 0, email: 'juan@hotmail.com', password: '1234567')
     @first_post = Post.create(author_id: @user.id, Title: 'The jungle', Text: 'Lorem ipsum fugiat!', LikesCounter: 5,
                               CommentsCounter: 0)
     @second_post = Post.create(author_id: @user.id, Title: 'The animals', Text: 'Lorem ipsum fugiat!',

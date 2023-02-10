@@ -22,7 +22,7 @@
 <% end %>
 
   </ul>
-  <%= link_to "Create new post", new_user_post_path(:user_id => ApplicationController.current_user.id) , class: "btn btn-primary" %>
+  <%= link_to "Create new post", new_user_post_path(:user_id => params[:id]) , class: "btn btn-primary" %>
   <button type="button" class="seeAllpostsButton_user_show">See all posts</button>
   </div>
   

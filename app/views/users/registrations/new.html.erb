@@ -1,0 +1,44 @@
+<h2>Sign up</h2>
+
+<%= form_with(model: @user, local: true, method: :post) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :Name %><br />
+    <%= f.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Photo %><br />
+    <%= f.text_field :Photo %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :Bio %><br />
+    <%= f.text_area :Bio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+<% if flash[:error].present? %>
+  <div class="alert alert-danger">
+    <%= flash[:error] %>
+  </div>
+<% end %>
+
+<%= render "users/shared/links" %>

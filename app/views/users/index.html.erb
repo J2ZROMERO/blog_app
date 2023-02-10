@@ -1,12 +1,13 @@
 
   <ul class="subParentContent_user_index">
 
-
   <% @users.each do |user| %>
     
     <%= render "users/user", user: user %>
     
     <% end %>
     
+    <h1 class="sign_out">  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </h1>
   </ul>
 
+  

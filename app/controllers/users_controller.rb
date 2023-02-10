@@ -7,6 +7,9 @@ class UsersController < ApplicationController
     @users.each do |user|
       @posts_count_by_user[user.id] = Post.where(author_id: user.id).count
     end
+    return unless user_signed_in?
+
+    @current_user = current_user
   end
 
   def show
