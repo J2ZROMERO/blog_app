@@ -13,7 +13,6 @@ gem 'database_cleaner'
 
 gem 'devise'
 
-
 gem 'rails-controller-testing'
 
 # Use postgresql as the database for Active Record
