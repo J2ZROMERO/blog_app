@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   
   
+  
 
   resources :users,only: [:index, :show, :new] do 
     resources :posts, only: [:index, :show,:new, :create, :destroy] do    

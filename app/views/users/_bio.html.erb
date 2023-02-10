@@ -8,7 +8,7 @@ Comments: <%= @comments_count_by_post[post.id] || 0 %>,
 Likes: <%= @likes_count_by_post[post.id] || 0 %>,
   </h3>
   <% if can? :destroy, @total_posts[post.id] %>
-      <%= link_to "Delete", users_path, method: :delete, data: { confirm: "Are you sure?" } %>
+      <%= button_to "Delete", user_post_path(@current_user,post) , method: :delete, data: { confirm: "Are you sure?" } %>
   <% end %>
   </li>
 

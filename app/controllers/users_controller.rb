@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
   layout 'application'
+  
   def index
     @stylesheet = 'user/user'
     @users = User.all
@@ -14,6 +16,7 @@ class UsersController < ApplicationController
     @current_user = current_user
   end
 
+
   def show
     @stylesheet = 'user/show'
     @users = User.find_by(id: params[:id]) # object no proper of the database we use new instead of find
@@ -22,7 +25,7 @@ class UsersController < ApplicationController
     @comments_count_by_post = {}
     @likes_count_by_post = {}
     @total_posts = {}
-    @t = Post.find_by(author_id: 2)
+    @t = Post.find_by(author_id: 3)
     return unless user_signed_in?
     @current_user = current_user
 

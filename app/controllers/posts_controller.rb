@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   layout 'application'
+  load_and_authorize_resource
   def index
     @stylesheet = 'post/post'
     @users = User.find_by(id: params[:user_id]) # object no proper of the database we use new instead of find
@@ -15,6 +16,21 @@ class PostsController < ApplicationController
       @comments_by_post[post.id] = Comment.includes(:user).where(author_id: params[:user_id], posts_id: post.id)
     end
   end
+
+
+
+    def destroy
+      return unless user_signed_in?
+    @current_user = current_user
+      post = Post.find(params[:id])
+      user = User.find(params[:user_id])
+      post.comments.destroy_all
+      post.destroy
+      user.update(PostsCounter: user.posts.count)
+      redirect_to user_path(params[:id])
+    end
+  
+  
 
   def show
     @stylesheet = 'post/show'
@@ -48,14 +64,7 @@ class PostsController < ApplicationController
   end
 
 
-  def destroy
-    @post = Post.find_by(id: params[:id])
-    authorize! :destroy, @post
-    @post.destroy
-    asdasdasas
-    redirect_to posts_path, notice: "Post was successfully deleted."
-  end
-  
+
 
   def create
     @stylesheet = 'post/show'
@@ -78,6 +87,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:posts).permit(:title, :text)
+    params.require(:post).permit(:title, :text)
   end
 end
