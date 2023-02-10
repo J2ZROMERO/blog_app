@@ -42,7 +42,7 @@ input#user_password {
   width: 100%;
   height: 36px;
   box-shadow: 2px 2px black;
-  border: 1px soli black;
+  border: 1px solid black;
 }
 
 input[type="submit"] {
