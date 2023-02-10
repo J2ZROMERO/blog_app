@@ -43,15 +43,30 @@ class PostsController < ApplicationController
   def new
     @stylesheet = 'post/show'
     @post = Post.new
+    return unless user_signed_in?
+    @current_user = current_user
   end
 
+
+  def destroy
+    @post = Post.find_by(id: params[:id])
+    authorize! :destroy, @post
+    @post.destroy
+    asdasdasas
+    redirect_to posts_path, notice: "Post was successfully deleted."
+  end
+  
+
   def create
-    @id_user = ApplicationController.current_user.id
-    @post = Post.new(author_id: @id_user, Title: params[:post][:Title], Text: params[:post][:Text],
+    @stylesheet = 'post/show'
+    return unless user_signed_in?
+    @current_user = current_user
+    
+    @post = Post.new(author_id: @current_user.id, Title: params[:post][:Title], Text: params[:post][:Text],
                      CommentsCounter: 0, LikesCounter: 0)
     if @post.save
       flash[:notice] = 'post created successfully'
-      redirect_to user_path(@id_user)
+      redirect_to user_path(params[:user_id])
 
     else
       flash[:alert] = 'Error whe the post was created'
