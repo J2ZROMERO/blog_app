@@ -70,6 +70,9 @@
 - Add posts.
 - Add likes to posts. 
 - Execute Capybara tests.
+- Ahutorization for the comments and posts with priority, 'admin' can manage those and the others users just what them have created.
+- In the seed file only the user with the email jose@hotmail.com that has the id=1 has the admin priority.
+
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
