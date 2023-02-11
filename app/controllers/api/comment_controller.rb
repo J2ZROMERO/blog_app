@@ -2,7 +2,6 @@ class Api::CommentController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create]
   include Devise::Controllers::Helpers
 
-
   def index
     @comments = Comment.where(author_id: params[:user_id])
     render json: @comments
