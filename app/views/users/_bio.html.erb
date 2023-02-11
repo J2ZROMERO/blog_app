@@ -1,10 +1,14 @@
 
   <li id="p_item_user_show"> 
   <h2 class="numPost_user_show">Post <%= post.id %></h2>
+  <h3 class="textPost_user_show"><%= post.Title %> </h3>
    <p class="textPost_user_show"><%= post.Text %> </p>
 <h3 class="comLikesPost_user_show">
 Comments: <%= @comments_count_by_post[post.id] || 0 %>, 
 Likes: <%= @likes_count_by_post[post.id] || 0 %>,
   </h3>
+  <% if can? :destroy, @total_posts[post.id] %>
+      <%= button_to "Delete", user_post_path(@current_user,post) , method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
   </li>
 

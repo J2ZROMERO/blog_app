@@ -11,6 +11,8 @@ gem 'sprockets-rails'
 
 gem 'database_cleaner'
 
+gem 'cancancan'
+
 gem 'devise'
 
 gem 'rails-controller-testing'

@@ -1,34 +1,38 @@
-  <div class="postComment_post_show">
+<div class="postComment_post_show">
 
     
-        <div class="postSection_post_show"> 
-         <h2 class="numPost_post_show">Post <%= @post.id %> By  <%= @post.user.Name %></h2>
-        <h3 class="comLikesPost_post_show">
-        Comments: <%= @comments_count_by_post %>, 
-        Likes: <%= @likes_count_by_post %> </h3>
-        <h2 class="title_post_show"><%= @post.Title %>  </h2>
-        <p class="textPost_post_show_<%= @post.id %>">
-        <%= @post.Text %> 
-        </p>
+  <div class="postSection_post_show"> 
+   <h2 class="numPost_post_show">Post <%= @likes_count_by_post.post.id %> By  <%= @post.user.Name %></h2>
+  <h3 class="comLikesPost_post_show">
+  Comments: <%= @comments_count_by_post %>, 
+  Likes: <%= @likes_count_by_post.post.LikesCounter %> </h3>
+  <h2 class="title_post_show"><%= @post.Title %>  </h2>
+  <p class="textPost_post_show_<%= @post.id %>">
+  <%= @post.Text %> 
+  </p>
 
-        <%= button_to 'Like', like_user_post_path(:user_id => 1), method: :post %>
+  <%= button_to 'Like', like_user_post_path(:user_id => 1), method: :post %>
 
-        <%= @like %>
+  <%= @like %>
 
-        </div>
-        
-        <ul class="commentSection_post_show"> 
-
-        <% @comments_by_post.each do |comment| %>
-        <li class="commentByUser_post_show_<%= comment.id %>">
-        <h2 class="userComment_post_show"> <%= comment.user.Name %> :  
-         <h3 class="commentMessage_post_show_<%= comment.id %>"> <%= comment.Text %></h3> 
-        </h2>
-        
-         </li> 
-         <% end %>
-
-        </ul>
-        <%= link_to "Create new comment", new_user_post_comment_path(:user_id => ApplicationController.current_user.id,:post_id => @post_id.id) , class: "btn btn-primary" %>        
-        
   </div>
+  
+  <ul class="commentSection_post_show"> 
+
+  <% @comments_by_post.each do |comment| %>
+  <li class="commentByUser_post_show_<%= comment.id %>">
+  <h2 class="userComment_post_show"> <%= comment.user.Name %> :  
+   <h3 class="commentMessage_post_show_<%= comment.id %>"> <%= comment.Text %></h3> 
+  </h2>
+  <% if can? :destroy, comment %>
+  <%= button_to "Delete", user_post_comment_path(@current_user,comment, id: comment.id) , method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>
+  
+   </li> 
+   <% end %>
+
+  </ul>
+  <%= link_to "Create new comment", new_user_post_comment_path(:user_id => @current_user,:post_id => @post_id.id) , class: "btn btn-primary" %>        
+  
+  
+</div>

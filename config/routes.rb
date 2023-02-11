@@ -5,15 +5,15 @@ Rails.application.routes.draw do
     root to: "users/sessions#new"
     get '/users/sign_out', to: 'devise/sessions#destroy'
     get '/users/password', to: 'users/passwords#create'
-    
   end
+  
   
   
 
   resources :users,only: [:index, :show, :new] do 
-    resources :posts, only: [:index, :show,:new, :create] do    
+    resources :posts, only: [:index, :show,:new, :create, :destroy] do    
       post :like, on: :member
-      resources :comments, only: [:new, :create] 
+      resources :comments, only: [:new, :create, :destroy] 
       
   
     end
