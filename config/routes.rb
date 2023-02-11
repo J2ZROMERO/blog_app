@@ -21,18 +21,10 @@ end
 namespace :api do
   resources :user, only: [:show, :index] do
     resources :post, only: [:show] do
-      resources :comment, only: [:index ,:show] do
+      resources :comment, only: [:index , :create] do
     end
   end
 end
-end
-
-namespace :api do
-    resources :user, only: [:show, :index] do
-      resources :post, only: [:show] do
-        
-    end
-  end
 end
 
 
