@@ -1,4 +1,4 @@
-  <div class="postComment_post_show">
+<div class="postComment_post_show">
 
     
         <div class="postSection_post_show"> 
@@ -24,6 +24,9 @@
         <h2 class="userComment_post_show"> <%= comment.user.Name %> :  
          <h3 class="commentMessage_post_show_<%= comment.id %>"> <%= comment.Text %></h3> 
         </h2>
+        <% if can? :destroy, comment %>
+        <%= button_to "Delete", user_post_comment_path(@current_user,comment, id: comment.id) , method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
         
          </li> 
          <% end %>
