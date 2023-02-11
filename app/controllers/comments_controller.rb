@@ -7,19 +7,22 @@ class CommentsController < ApplicationController
 
   def destroy
     return unless user_signed_in?
-  @current_user = current_user
+
+    @current_user = current_user
     comment = Comment.find(params[:id])
-    
+
     comment.destroy
-    
+
     redirect_to user_path(params[:id])
   end
 
   def create
     return unless user_signed_in?
-  @current_user = current_user
 
-    @comment = Comment.new(comment_params.merge({Text: params[:comment][:text],posts_id: params[:post_id], author_id: @current_user.id}))
+    @current_user = current_user
+
+    @comment = Comment.new(comment_params.merge({ Text: params[:comment][:text], posts_id: params[:post_id],
+                                                  author_id: @current_user.id }))
 
     if @comment.save
       flash[:notice] = 'post created successfully'
@@ -34,9 +37,7 @@ class CommentsController < ApplicationController
 
   private
 
-
   def comment_params
     params.require(:comment).permit(:Text)
   end
-
 end
