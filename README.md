@@ -156,7 +156,31 @@ To run the project, execute the following command:
 
 - This command will ensure to load the models to tests it.
 
-- Once the
+- You must be sign in to execute de create comment.
+  
+- shows all the users
+  http://localhost:3000/api/user/
+
+- shows all the post by the given user
+  http://localhost:3000/api/user/1
+
+- show the post selected 
+  http://localhost:3000/api/user/1/post/7
+
+- show all comments by the given post
+  http://localhost:3000/api/user/1/post/7/comment
+
+- You can add a new comment to the post
+  http://localhost:3000/api/user/1/post/7/comment
+
+  POST /api/user/1/post/7/comment
+  {
+    "text": "Este es mi comentario"
+    "post_id": "7"
+  }
+
+
+
 ### Run tests
 
 - To run the tests please follow the next instruccions.

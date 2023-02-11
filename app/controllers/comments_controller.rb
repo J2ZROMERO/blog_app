@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   load_and_authorize_resource
+
   def new
     @stylesheet = 'post/show'
     @comment = Comment.new
